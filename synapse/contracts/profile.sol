@@ -10,13 +10,16 @@ contract profile {
     uint user;
   }
 
+
+/*
   mapping(uint => Thought) public thoughts;
 
 
-  function createTask(string memory _content) public {
-    taskCount ++;
-    tasks[taskCount] = Task(taskCount, _content, false);
+  function createThought(string memory _content) public {
+    thoughtCount ++;
+    thoughts[thoughtCount] = Thought(thoughtCount, _content, msg.sender);
   }
+  */
 
 
 }
