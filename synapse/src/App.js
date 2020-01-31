@@ -5,7 +5,6 @@ import logo from './public/home/logo.png';
 import text from './public/home/text.png';
 
 
-
 function isInstalled() {
    if (typeof Web3 !== 'undefined'){
       console.log('MetaMask is installed')
@@ -31,8 +30,23 @@ function isLocked(web3) {
 
 
 class App extends Component {
-  componentWillMount() {
-    this.loadBlockchainData()
+
+  async componentWillMount() {
+    await this.loadWeb3()
+    await this.loadBlockchainData()
+  }
+
+  async loadWeb3() {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum)
+      await window.ethereum.enable()
+    }
+    else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider)
+    }
+    else {
+      window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+    }
   }
 
   async loadBlockchainData() {
@@ -43,6 +57,8 @@ class App extends Component {
 
     isInstalled();
     isLocked(web3);
+
+    //await ethereum.enable();
 
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
