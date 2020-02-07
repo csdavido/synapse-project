@@ -3,6 +3,8 @@ import Web3 from 'web3'
 import './App.css'
 import logo from './public/home/logo.png';
 import text from './public/home/text.png';
+import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from './config'
+import { PROFILE_ABI, PROFILE_ADDRESS } from './config'
 
 
 function isInstalled() {
@@ -60,19 +62,30 @@ class App extends Component {
 
     //await ethereum.enable();
 
+    const synapse = new web3.eth.Contract(SYNAPSE_ABI, SYNAPSE_ADDRESS)
+    const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
 
     var balance = balanceWei/1000000000000000000
 
-    this.setState({ account: accounts[0], balance: balance })
+    const myString = await synapse.methods.myString().call()
+
+    var thoughtCount = await profile.methods.thoughtCount().call()
+
+    const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
+    const latest = latestCall.thought
+
+    this.setState({ account: accounts[0], balance: balance, latest: latest })
   }
 
   constructor(props) {
     super(props)
     this.state = {
       account: '',
-      balance: ''
+      balance: '',
+      myString: ''
 
     }
   }
@@ -99,6 +112,7 @@ class App extends Component {
           </a>
 
           <p></p>
+          <p>Latest Thought: {this.state.latest}</p>
 
           <p>Your account: {this.state.account}</p>
           <p>Your balance: {this.state.balance}</p>
