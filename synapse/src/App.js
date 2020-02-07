@@ -5,6 +5,7 @@ import logo from './public/home/logo.png';
 import text from './public/home/text.png';
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from './config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from './config'
+import Thought from './createThought'
 
 
 function isInstalled() {
@@ -51,6 +52,7 @@ class App extends Component {
     }
   }
 
+
   async loadBlockchainData() {
 
     const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
@@ -68,6 +70,9 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
 
+    this.setState({ profile })
+    this.setState({ thoughtCount })
+
     var balance = balanceWei/1000000000000000000
 
     const myString = await synapse.methods.myString().call()
@@ -77,7 +82,17 @@ class App extends Component {
     const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
     const latest = latestCall.thought
 
+    for (var i = 0; i <= thoughtCount; i++) {
+      const singleThought = await profile.methods.thoughts(i).call()
+      this.setState({
+        thoughts: [...this.state.thoughts, singleThought]
+      })
+    }
+
+
     this.setState({ account: accounts[0], balance: balance, latest: latest })
+    this.setState({ loading: false })
+
   }
 
   constructor(props) {
@@ -85,15 +100,41 @@ class App extends Component {
     this.state = {
       account: '',
       balance: '',
-      myString: ''
+      myString: '',
+      thoughts: [],
+      loading: true
 
     }
+    this.createThought = this.createThought.bind(this)
   }
+
+
+  createThought(string) {
+
+    this.setState({ loading: true })
+    this.state.profile.methods.createThought(string).send({ from: this.state.account })
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+  }
+
+
+
+
+
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
+
+        <p></p>
+        <p>Latest Thought Added: {this.state.latest}</p>
+
+        <p>Your account: {this.state.account}</p>
+        <p>Your balance: {this.state.balance}</p>
+
+
           <p>
             Welcome to
           </p>
@@ -104,20 +145,44 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn More
           </a>
 
-          <p></p>
-          <p>Latest Thought: {this.state.latest}</p>
 
-          <p>Your account: {this.state.account}</p>
-          <p>Your balance: {this.state.balance}</p>
+          <br />
+
+          <p> Send a thought to the blockchain!</p>
+          <main role="main" className="">
+              { this.state.loading
+                ? <div id="loader" className=""><p className="">Loading...</p></div>
+                : <Thought
+                  thoughts={this.state.thoughts}
+                  createThought={this.createThought}
+                 />
+              }
+            </main>
+
 
           <p></p>
+
+
+{/*
+          <ul>
+              { this.state.thoughts.map((thought, key) => {
+                return(
+                  <div key={key}>
+                    <label>
+                      <span>{thought.thought}</span>
+                    </label>
+                  </div>
+                )
+              })}
+            </ul>
+*/}
 
 
         </header>
