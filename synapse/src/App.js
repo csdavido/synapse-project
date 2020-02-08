@@ -82,7 +82,7 @@ class App extends Component {
     const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
     const latest = latestCall.thought
 
-    for (var i = 0; i <= thoughtCount; i++) {
+    for (var i = thoughtCount; i >= 0; i--) {
       const singleThought = await profile.methods.thoughts(i).call()
       this.setState({
         thoughts: [...this.state.thoughts, singleThought]
@@ -166,8 +166,7 @@ class App extends Component {
               }
             </main>
 
-
-          <p></p>
+            <p></p>
 
 
 {/*
@@ -177,6 +176,8 @@ class App extends Component {
                   <div key={key}>
                     <label>
                       <span>{thought.thought}</span>
+                      <span> &nbsp; &nbsp; </span>
+                      <span>{thought.user}</span>
                     </label>
                   </div>
                 )
