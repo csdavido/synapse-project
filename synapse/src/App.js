@@ -145,7 +145,7 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="#"
+            href="https://github.com/csdavido/synapse-project"
             target="_blank"
             rel="noopener noreferrer"
           >
