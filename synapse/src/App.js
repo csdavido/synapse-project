@@ -38,7 +38,11 @@ class App extends Component {
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
-
+    
+  componentDidMount(){
+    document.title = "Synapse App"
+  }
+  
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -82,11 +86,22 @@ class App extends Component {
     const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
     const latest = latestCall.thought
 
-    for (var i = thoughtCount; i >= 0; i--) {
-      const singleThought = await profile.methods.thoughts(i).call()
-      this.setState({
-        thoughts: [...this.state.thoughts, singleThought]
-      })
+
+    if (thoughtCount < 10) {
+      for (var i = thoughtCount; i >= 0; i--) {
+        const singleThought = await profile.methods.thoughts(i).call()
+        this.setState({
+          thoughts: [...this.state.thoughts, singleThought]
+        })
+      }
+    }
+    else {
+      for (var i = thoughtCount; i >= (thoughtCount-10); i--) {
+        const singleThought = await profile.methods.thoughts(i).call()
+        this.setState({
+          thoughts: [...this.state.thoughts, singleThought]
+        })
+      }
     }
 
 
@@ -128,12 +143,16 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
 
-        <p></p>
-        <p>Latest Thought Added: {this.state.latest}</p>
-
-        <p>Your account: {this.state.account}</p>
-        <p>Your balance: {this.state.balance}</p>
-
+        <table id="t01">
+          <tr>
+            <th><p>Account: </p></th>
+            <th><p>{this.state.account}</p></th>
+          </tr>
+          <tr>
+            <th><p>Balance: </p></th>
+            <th><p>{this.state.balance}</p></th>
+          </tr>
+        </table>
 
           <p>
             Welcome to
@@ -145,7 +164,7 @@ class App extends Component {
           </p>
           <a
             className="App-link"
-            href="#"
+            href="https://github.com/csdavido/synapse-project"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -167,8 +186,6 @@ class App extends Component {
             </main>
 
             <p></p>
-
-
 {/*
           <ul>
               { this.state.thoughts.map((thought, key) => {
@@ -184,8 +201,6 @@ class App extends Component {
               })}
             </ul>
 */}
-
-
         </header>
       </div>
 
