@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './App.css'
 
 
 class Thought extends Component {
@@ -27,9 +28,10 @@ class Thought extends Component {
           <input type="submit" hidden={false} />
         </form>
 
-        <br />
-        <br />
+        <hr/>
 
+
+{/*
         <ul>
             { this.props.thoughts.map((thought, key) => {
               return(
@@ -69,6 +71,9 @@ class Thought extends Component {
               )
             })}
           </ul>
+
+*/}
+
 
       </div>
     );

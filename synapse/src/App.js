@@ -6,6 +6,9 @@ import text from './public/home/text.png';
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from './config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from './config'
 import Thought from './createThought'
+import Thoughts from './thoughts'
+
+
 
 
 function isInstalled() {
@@ -42,7 +45,6 @@ class App extends Component {
 
   componentDidMount(){
     document.title = "Synapse App"
-    this.forceUpdate()
   }
 
   async loadWeb3() {
@@ -56,6 +58,10 @@ class App extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
+  }
+
+  async componentWillUnmount() {
+  clearInterval(this.interval);
   }
 
 
@@ -192,7 +198,11 @@ class App extends Component {
                   createThought={this.createThought}
 
                  />
+
               }
+
+              <Thoughts
+              />
             </main>
 
             <p></p>

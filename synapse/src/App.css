@@ -46,16 +46,32 @@
 }
 
 
-.App table#t01 {
+th, td {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+
+hr {
+  border: 1px solid white !important;
+  margin-top: 100px;
+}
+
+.App #t01 {
   border: 2px solid white;
   margin-top: 10px;
   margin-left: 10px;
+  margin-bottom: 20px;
   align-items:flex-start;
   font-size:14px;
   text-align: left;
-
 }
 
+
+.latestText {
+  margin-top: 55px !important;
+  margin-bottom: -35px !important;
+}
 .thought-wrap {
   max-width:490px;
   background: #fff;
