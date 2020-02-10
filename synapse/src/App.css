@@ -85,7 +85,7 @@
   font-weight:normal;
   margin-top: 5px;
   text-align: left;
-  
+
 }
 
 .thought-counts {
@@ -105,6 +105,17 @@
 .thought-counts div svg {
   color:#657786;
   margin-right: 10px;
+}
+
+.thoughtBox {
+  width: auto;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
 }
 
 @media screen and (max-width:430px){

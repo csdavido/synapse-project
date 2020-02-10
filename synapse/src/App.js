@@ -37,12 +37,14 @@ class App extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
+    this.forceUpdate()
   }
-    
+
   componentDidMount(){
     document.title = "Synapse App"
+    this.forceUpdate()
   }
-  
+
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -87,16 +89,17 @@ class App extends Component {
     const latest = latestCall.thought
 
 
-    if (thoughtCount < 10) {
-      for (var i = thoughtCount; i >= 0; i--) {
+    if (thoughtCount < 5) {
+      for (var i = thoughtCount-1; i >= 0; i--) {
         const singleThought = await profile.methods.thoughts(i).call()
         this.setState({
           thoughts: [...this.state.thoughts, singleThought]
+          //thoughts: [...this.setState({thoughts: [...this.state.thoughts, singleThought]})]
         })
       }
     }
     else {
-      for (var i = thoughtCount; i >= (thoughtCount-10); i--) {
+      for (var i = thoughtCount-1; i >= (thoughtCount-5); i--) {
         const singleThought = await profile.methods.thoughts(i).call()
         this.setState({
           thoughts: [...this.state.thoughts, singleThought]
@@ -126,11 +129,14 @@ class App extends Component {
 
   createThought(string) {
 
+    //const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+
     this.setState({ loading: true })
     this.state.profile.methods.createThought(string).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
+
   }
 
 
@@ -179,8 +185,12 @@ class App extends Component {
               { this.state.loading
                 ? <div id="loader" className=""><p className="">Loading...</p></div>
                 : <Thought
+                  //thoughts={this.state.thoughts}
+                  //createThought={this.createThought}
+
                   thoughts={this.state.thoughts}
                   createThought={this.createThought}
+
                  />
               }
             </main>
