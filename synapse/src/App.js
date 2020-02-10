@@ -143,12 +143,16 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
 
-        <p></p>
-        <p>Latest Thought Added: {this.state.latest}</p>
-
-        <p>Your account: {this.state.account}</p>
-        <p>Your balance: {this.state.balance}</p>
-
+        <table id="t01">
+          <tr>
+            <th><p>Account: </p></th>
+            <th><p>{this.state.account}</p></th>
+          </tr>
+          <tr>
+            <th><p>Balance: </p></th>
+            <th><p>{this.state.balance}</p></th>
+          </tr>
+        </table>
 
           <p>
             Welcome to
@@ -182,8 +186,6 @@ class App extends Component {
             </main>
 
             <p></p>
-
-
 {/*
           <ul>
               { this.state.thoughts.map((thought, key) => {
@@ -199,8 +201,6 @@ class App extends Component {
               })}
             </ul>
 */}
-
-
         </header>
       </div>
 
