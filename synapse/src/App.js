@@ -38,7 +38,11 @@ class App extends Component {
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
-
+    
+  componentDidMount(){
+    document.title = "Synapse App"
+  }
+  
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
