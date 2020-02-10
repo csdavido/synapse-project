@@ -82,11 +82,22 @@ class App extends Component {
     const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
     const latest = latestCall.thought
 
-    for (var i = thoughtCount; i >= 0; i--) {
-      const singleThought = await profile.methods.thoughts(i).call()
-      this.setState({
-        thoughts: [...this.state.thoughts, singleThought]
-      })
+
+    if (thoughtCount < 10) {
+      for (var i = thoughtCount; i >= 0; i--) {
+        const singleThought = await profile.methods.thoughts(i).call()
+        this.setState({
+          thoughts: [...this.state.thoughts, singleThought]
+        })
+      }
+    }
+    else {
+      for (var i = thoughtCount; i >= (thoughtCount-10); i--) {
+        const singleThought = await profile.methods.thoughts(i).call()
+        this.setState({
+          thoughts: [...this.state.thoughts, singleThought]
+        })
+      }
     }
 
 
