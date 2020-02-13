@@ -10,10 +10,15 @@ contract profile {
     address user;
   }
 
+  struct userProfile {
+      uint id;
+      string username;
+  }
 
   //Thought[] public thoughts;
 
   mapping(uint => Thought) public thoughts;
+  mapping(address => string) public username;
 
 
   constructor () public {
@@ -36,6 +41,11 @@ contract profile {
 
   }
 
+  function setUsername(string memory _newUsername) public {
+    username[msg.sender] = _newUsername;
+  }
 
-
+  function getUsername(address _address) public view returns (string memory) {
+      return username[_address];
+  }
 }
