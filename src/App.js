@@ -200,7 +200,7 @@ class App extends Component {
           <p> Send a thought to the blockchain!</p>
           <main role="main" className="">
               { this.state.loading
-                ? <div id="loader" className=""><p className="">Loading...</p></div>
+                ? <div id="loader" className=""><p className="">Communicating with blockchain...</p></div>
                 : <Thought
                   //thoughts={this.state.thoughts}
                   //createThought={this.createThought}

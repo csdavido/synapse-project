@@ -136,7 +136,7 @@ class Thoughts extends Component {
                   <div class="thought-wrap">
                     <div class="thought-head">
                       <div class="thought-info">
-                        <span>@{thought.user}</span>
+                        <span>@{thought.sender}</span>
                         <p>{thought.thought}</p>
                         <p>-{thought.handle}</p>
                       </div>

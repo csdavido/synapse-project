@@ -27,10 +27,11 @@ contract profile {
     mapping (address => string) handles;
     mapping (address => uint) senderThoughts;
     mapping (address => uint) senderID;
+    mapping (string => uint) handleList;
 
 
     constructor () public {
-      firstThought();
+      genesisThought();
     }
 
     function getUser () public {
@@ -51,8 +52,15 @@ contract profile {
 
     }
 
+    function firstThought(string memory _handle) public {
+      string memory ft = "I am alive!";
+      thoughts[thoughtCount] = Thought(thoughtCount, ft, msg.sender, _handle);
+      senderThoughts[msg.sender]++;
+      thoughtCount ++;
+    }
 
-    function firstThought() public {
+
+    function genesisThought() public {
       string memory ft = "Hello, World!";
       thoughts[thoughtCount] = Thought(thoughtCount, ft, msg.sender, "genesis");
       thoughtCount ++;
@@ -74,8 +82,19 @@ contract profile {
 
       uint sndr = senderID[msg.sender];
 
-      users[sndr] = User(sndr, _handle, msg.sender);
-      handles[msg.sender] = _handle;
+      if (senderThoughts[msg.sender] == 0) {
+        firstThought(_handle);
+      }
+
+      else {
+        if (handleList[_handle] == 0) {
+          users[sndr] = User(sndr, _handle, msg.sender);
+          handles[msg.sender] = _handle;
+        }
+        else {
+          handleList[_handle] = 1;
+        }
+      }
     }
 
 

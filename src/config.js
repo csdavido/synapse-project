@@ -176,8 +176,7 @@ export const SYNAPSE_ABI = [
 
 //export const PROFILE_ADDRESS = '0x36aCcAb7A77f4F6A0c7AaD1c4Ca380c95a73Ec95'
 //export const PROFILE_ADDRESS = '0xb9b8a34c36810ba23e54df66646dfb26e93af8d7'
-//export const PROFILE_ADDRESS = '0xcb7d48066f8a268b57c583ec506f4c92de26e2fd'
-export const PROFILE_ADDRESS = '0x6c4544fb594fdcb16ab305b63117dfbce82d7243'
+export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
 
 export const PROFILE_ABI = [
 	{
@@ -203,8 +202,23 @@ export const PROFILE_ABI = [
 	},
 	{
 		"constant": false,
-		"inputs": [],
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_handle",
+				"type": "string"
+			}
+		],
 		"name": "firstThought",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "genesisThought",
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",

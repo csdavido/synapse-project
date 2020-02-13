@@ -28,14 +28,14 @@
     "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol",
     "exportedSymbols": {
       "test": [
-        404
+        476
       ]
     },
-    "id": 405,
+    "id": 477,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 400,
+        "id": 472,
         "literals": [
           "solidity",
           "^",
@@ -51,19 +51,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 404,
+        "id": 476,
         "linearizedBaseContracts": [
-          404
+          476
         ],
         "name": "test",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 403,
+            "id": 475,
             "name": "myString",
             "nodeType": "VariableDeclaration",
-            "scope": 404,
+            "scope": 476,
             "src": "45:44:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -72,7 +72,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 401,
+              "id": 473,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "45:6:3",
@@ -84,7 +84,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "48656c6c6f2c2053757065727374617221",
-              "id": 402,
+              "id": 474,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -102,7 +102,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 405,
+        "scope": 477,
         "src": "26:67:3"
       }
     ],
@@ -112,14 +112,14 @@
     "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol",
     "exportedSymbols": {
       "test": [
-        404
+        476
       ]
     },
-    "id": 405,
+    "id": 477,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 400,
+        "id": 472,
         "literals": [
           "solidity",
           "^",
@@ -135,19 +135,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 404,
+        "id": 476,
         "linearizedBaseContracts": [
-          404
+          476
         ],
         "name": "test",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 403,
+            "id": 475,
             "name": "myString",
             "nodeType": "VariableDeclaration",
-            "scope": 404,
+            "scope": 476,
             "src": "45:44:3",
             "stateVariable": true,
             "storageLocation": "default",
@@ -156,7 +156,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 401,
+              "id": 473,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "45:6:3",
@@ -168,7 +168,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "48656c6c6f2c2053757065727374617221",
-              "id": 402,
+              "id": 474,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -186,7 +186,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 405,
+        "scope": 477,
         "src": "26:67:3"
       }
     ],
@@ -198,7 +198,7 @@
   },
   "networks": {},
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-13T04:24:12.460Z",
+  "updatedAt": "2020-02-13T06:45:18.271Z",
   "devdoc": {
     "methods": {}
   },

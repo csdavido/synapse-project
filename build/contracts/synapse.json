@@ -178,14 +178,14 @@
     "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/synapse.sol",
     "exportedSymbols": {
       "synapse": [
-        398
+        470
       ]
     },
-    "id": 399,
+    "id": 471,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 225,
+        "id": 297,
         "literals": [
           "solidity",
           "^",
@@ -201,19 +201,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 398,
+        "id": 470,
         "linearizedBaseContracts": [
-          398
+          470
         ],
         "name": "synapse",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 228,
+            "id": 300,
             "name": "thoughtCount",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "48:28:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -222,7 +222,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 226,
+              "id": 298,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "48:4:2",
@@ -234,7 +234,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 227,
+              "id": 299,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -253,10 +253,10 @@
           },
           {
             "constant": false,
-            "id": 231,
+            "id": 303,
             "name": "userCount",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "80:18:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -265,7 +265,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 229,
+              "id": 301,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "80:4:2",
@@ -277,7 +277,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 230,
+              "id": 302,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -296,14 +296,14 @@
           },
           {
             "canonicalName": "synapse.Thought",
-            "id": 240,
+            "id": 312,
             "members": [
               {
                 "constant": false,
-                "id": 233,
+                "id": 305,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "124:7:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -312,7 +312,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 232,
+                  "id": 304,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "124:4:2",
@@ -326,10 +326,10 @@
               },
               {
                 "constant": false,
-                "id": 235,
+                "id": 307,
                 "name": "thought",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "137:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -338,7 +338,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 234,
+                  "id": 306,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "137:6:2",
@@ -352,10 +352,10 @@
               },
               {
                 "constant": false,
-                "id": 237,
+                "id": 309,
                 "name": "sender",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "157:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -364,7 +364,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 236,
+                  "id": 308,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "157:7:2",
@@ -379,10 +379,10 @@
               },
               {
                 "constant": false,
-                "id": 239,
+                "id": 311,
                 "name": "handle",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "177:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -391,7 +391,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 238,
+                  "id": 310,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "177:6:2",
@@ -406,20 +406,20 @@
             ],
             "name": "Thought",
             "nodeType": "StructDefinition",
-            "scope": 398,
+            "scope": 470,
             "src": "103:92:2",
             "visibility": "public"
           },
           {
             "canonicalName": "synapse.User",
-            "id": 247,
+            "id": 319,
             "members": [
               {
                 "constant": false,
-                "id": 242,
+                "id": 314,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "217:7:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -428,7 +428,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 241,
+                  "id": 313,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "217:4:2",
@@ -442,10 +442,10 @@
               },
               {
                 "constant": false,
-                "id": 244,
+                "id": 316,
                 "name": "handle",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "230:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -454,7 +454,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 243,
+                  "id": 315,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "230:6:2",
@@ -468,10 +468,10 @@
               },
               {
                 "constant": false,
-                "id": 246,
+                "id": 318,
                 "name": "user",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "249:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -480,7 +480,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 245,
+                  "id": 317,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "249:7:2",
@@ -496,27 +496,27 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 398,
+            "scope": 470,
             "src": "199:67:2",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 251,
+            "id": 323,
             "name": "thoughts",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "303:40:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
               "typeString": "mapping(uint256 => struct synapse.Thought)"
             },
             "typeName": {
-              "id": 250,
+              "id": 322,
               "keyType": {
-                "id": 248,
+                "id": 320,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "311:4:2",
@@ -528,18 +528,18 @@
               "nodeType": "Mapping",
               "src": "303:24:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                 "typeString": "mapping(uint256 => struct synapse.Thought)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 249,
+                "id": 321,
                 "name": "Thought",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 240,
+                "referencedDeclaration": 312,
                 "src": "319:7:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Thought_$240_storage_ptr",
+                  "typeIdentifier": "t_struct$_Thought_$312_storage_ptr",
                   "typeString": "struct synapse.Thought"
                 }
               }
@@ -549,21 +549,21 @@
           },
           {
             "constant": false,
-            "id": 255,
+            "id": 327,
             "name": "users",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "347:34:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
               "typeString": "mapping(uint256 => struct synapse.User)"
             },
             "typeName": {
-              "id": 254,
+              "id": 326,
               "keyType": {
-                "id": 252,
+                "id": 324,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "355:4:2",
@@ -575,18 +575,18 @@
               "nodeType": "Mapping",
               "src": "347:21:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                 "typeString": "mapping(uint256 => struct synapse.User)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 253,
+                "id": 325,
                 "name": "User",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 247,
+                "referencedDeclaration": 319,
                 "src": "363:4:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_User_$247_storage_ptr",
+                  "typeIdentifier": "t_struct$_User_$319_storage_ptr",
                   "typeString": "struct synapse.User"
                 }
               }
@@ -596,10 +596,10 @@
           },
           {
             "constant": false,
-            "id": 259,
+            "id": 331,
             "name": "handles",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "385:35:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -608,9 +608,9 @@
               "typeString": "mapping(address => string)"
             },
             "typeName": {
-              "id": 258,
+              "id": 330,
               "keyType": {
-                "id": 256,
+                "id": 328,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "394:7:2",
@@ -626,7 +626,7 @@
                 "typeString": "mapping(address => string)"
               },
               "valueType": {
-                "id": 257,
+                "id": 329,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "405:6:2",
@@ -641,10 +641,10 @@
           },
           {
             "constant": false,
-            "id": 263,
+            "id": 335,
             "name": "ownerThoughts",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "424:39:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -653,9 +653,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 262,
+              "id": 334,
               "keyType": {
-                "id": 260,
+                "id": 332,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "433:7:2",
@@ -671,7 +671,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 261,
+                "id": 333,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "444:4:2",
@@ -686,7 +686,7 @@
           },
           {
             "body": {
-              "id": 269,
+              "id": 341,
               "nodeType": "Block",
               "src": "491:25:2",
               "statements": [
@@ -696,18 +696,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 266,
+                      "id": 338,
                       "name": "firstThought",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 331,
+                      "referencedDeclaration": 403,
                       "src": "497:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 267,
+                    "id": 339,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -721,32 +721,32 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 268,
+                  "id": 340,
                   "nodeType": "ExpressionStatement",
                   "src": "497:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 270,
+            "id": 342,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 264,
+              "id": 336,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "481:2:2"
             },
             "returnParameters": {
-              "id": 265,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "491:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "469:47:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -754,31 +754,31 @@
           },
           {
             "body": {
-              "id": 273,
+              "id": 345,
               "nodeType": "Block",
               "src": "547:6:2",
               "statements": []
             },
             "documentation": null,
-            "id": 274,
+            "id": 346,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 271,
+              "id": 343,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "537:2:2"
             },
             "returnParameters": {
-              "id": 272,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "547:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "520:33:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -786,21 +786,21 @@
           },
           {
             "body": {
-              "id": 307,
+              "id": 379,
               "nodeType": "Block",
               "src": "611:186:2",
               "statements": [
                 {
                   "assignments": [
-                    280
+                    352
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 280,
+                      "id": 352,
                       "name": "user",
                       "nodeType": "VariableDeclaration",
-                      "scope": 307,
+                      "scope": 379,
                       "src": "618:18:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -809,7 +809,7 @@
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 279,
+                        "id": 351,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
                         "src": "618:6:2",
@@ -822,39 +822,39 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 285,
+                  "id": 357,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 281,
+                      "id": 353,
                       "name": "handles",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 259,
+                      "referencedDeclaration": 331,
                       "src": "639:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                         "typeString": "mapping(address => string storage ref)"
                       }
                     },
-                    "id": 284,
+                    "id": 356,
                     "indexExpression": {
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 282,
+                        "id": 354,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 506,
+                        "referencedDeclaration": 578,
                         "src": "647:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 283,
+                      "id": 355,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -885,7 +885,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 296,
+                    "id": 368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -894,25 +894,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 286,
+                        "id": 358,
                         "name": "thoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 251,
+                        "referencedDeclaration": 323,
                         "src": "665:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.Thought storage ref)"
                         }
                       },
-                      "id": 288,
+                      "id": 360,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 287,
+                        "id": 359,
                         "name": "thoughtCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 228,
+                        "referencedDeclaration": 300,
                         "src": "674:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -926,7 +926,7 @@
                       "nodeType": "IndexAccess",
                       "src": "665:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_storage",
+                        "typeIdentifier": "t_struct$_Thought_$312_storage",
                         "typeString": "struct synapse.Thought storage ref"
                       }
                     },
@@ -937,11 +937,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 290,
+                          "id": 362,
                           "name": "thoughtCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 228,
+                          "referencedDeclaration": 300,
                           "src": "698:12:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -950,11 +950,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 291,
+                          "id": 363,
                           "name": "_content",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 276,
+                          "referencedDeclaration": 348,
                           "src": "712:8:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -965,18 +965,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 292,
+                            "id": 364,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "722:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 293,
+                          "id": 365,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -992,11 +992,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 294,
+                          "id": 366,
                           "name": "user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 280,
+                          "referencedDeclaration": 352,
                           "src": "734:4:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1023,18 +1023,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 289,
+                        "id": 361,
                         "name": "Thought",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
+                        "referencedDeclaration": 312,
                         "src": "690:7:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Thought_$240_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Thought_$312_storage_ptr_$",
                           "typeString": "type(struct synapse.Thought storage pointer)"
                         }
                       },
-                      "id": 295,
+                      "id": 367,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1044,24 +1044,24 @@
                       "nodeType": "FunctionCall",
                       "src": "690:49:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_memory",
+                        "typeIdentifier": "t_struct$_Thought_$312_memory",
                         "typeString": "struct synapse.Thought memory"
                       }
                     },
                     "src": "665:74:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Thought_$240_storage",
+                      "typeIdentifier": "t_struct$_Thought_$312_storage",
                       "typeString": "struct synapse.Thought storage ref"
                     }
                   },
-                  "id": 297,
+                  "id": 369,
                   "nodeType": "ExpressionStatement",
                   "src": "665:74:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 302,
+                    "id": 374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1074,34 +1074,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 298,
+                        "id": 370,
                         "name": "ownerThoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 263,
+                        "referencedDeclaration": 335,
                         "src": "745:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 301,
+                      "id": 373,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 299,
+                          "id": 371,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "759:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 300,
+                        "id": 372,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1131,14 +1131,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 303,
+                  "id": 375,
                   "nodeType": "ExpressionStatement",
                   "src": "745:27:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 305,
+                    "id": 377,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1149,11 +1149,11 @@
                     "src": "778:14:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 304,
+                      "id": 376,
                       "name": "thoughtCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
+                      "referencedDeclaration": 300,
                       "src": "778:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1165,29 +1165,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 306,
+                  "id": 378,
                   "nodeType": "ExpressionStatement",
                   "src": "778:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 308,
+            "id": 380,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createThought",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 277,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 276,
+                  "id": 348,
                   "name": "_content",
                   "nodeType": "VariableDeclaration",
-                  "scope": 308,
+                  "scope": 380,
                   "src": "580:22:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -1196,7 +1196,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 275,
+                    "id": 347,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "580:6:2",
@@ -1212,12 +1212,12 @@
               "src": "579:24:2"
             },
             "returnParameters": {
-              "id": 278,
+              "id": 350,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "611:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "557:240:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1225,21 +1225,21 @@
           },
           {
             "body": {
-              "id": 330,
+              "id": 402,
               "nodeType": "Block",
               "src": "833:145:2",
               "statements": [
                 {
                   "assignments": [
-                    312
+                    384
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 312,
+                      "id": 384,
                       "name": "ft",
                       "nodeType": "VariableDeclaration",
-                      "scope": 330,
+                      "scope": 402,
                       "src": "839:16:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -1248,7 +1248,7 @@
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 311,
+                        "id": 383,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
                         "src": "839:6:2",
@@ -1261,11 +1261,11 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 314,
+                  "id": 386,
                   "initialValue": {
                     "argumentTypes": null,
                     "hexValue": "48656c6c6f2c20576f726c6421",
-                    "id": 313,
+                    "id": 385,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -1286,7 +1286,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 325,
+                    "id": 397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1295,25 +1295,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 315,
+                        "id": 387,
                         "name": "thoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 251,
+                        "referencedDeclaration": 323,
                         "src": "879:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.Thought storage ref)"
                         }
                       },
-                      "id": 317,
+                      "id": 389,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 316,
+                        "id": 388,
                         "name": "thoughtCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 228,
+                        "referencedDeclaration": 300,
                         "src": "888:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1327,7 +1327,7 @@
                       "nodeType": "IndexAccess",
                       "src": "879:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_storage",
+                        "typeIdentifier": "t_struct$_Thought_$312_storage",
                         "typeString": "struct synapse.Thought storage ref"
                       }
                     },
@@ -1338,11 +1338,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 319,
+                          "id": 391,
                           "name": "thoughtCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 228,
+                          "referencedDeclaration": 300,
                           "src": "912:12:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1351,11 +1351,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 320,
+                          "id": 392,
                           "name": "ft",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 312,
+                          "referencedDeclaration": 384,
                           "src": "926:2:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1366,18 +1366,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 321,
+                            "id": 393,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "930:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 322,
+                          "id": 394,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1394,7 +1394,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "67656e65736973",
-                          "id": 323,
+                          "id": 395,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1429,18 +1429,18 @@
                             "typeString": "literal_string \"genesis\""
                           }
                         ],
-                        "id": 318,
+                        "id": 390,
                         "name": "Thought",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
+                        "referencedDeclaration": 312,
                         "src": "904:7:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Thought_$240_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Thought_$312_storage_ptr_$",
                           "typeString": "type(struct synapse.Thought storage pointer)"
                         }
                       },
-                      "id": 324,
+                      "id": 396,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1450,24 +1450,24 @@
                       "nodeType": "FunctionCall",
                       "src": "904:48:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_memory",
+                        "typeIdentifier": "t_struct$_Thought_$312_memory",
                         "typeString": "struct synapse.Thought memory"
                       }
                     },
                     "src": "879:73:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Thought_$240_storage",
+                      "typeIdentifier": "t_struct$_Thought_$312_storage",
                       "typeString": "struct synapse.Thought storage ref"
                     }
                   },
-                  "id": 326,
+                  "id": 398,
                   "nodeType": "ExpressionStatement",
                   "src": "879:73:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 328,
+                    "id": 400,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1478,11 +1478,11 @@
                     "src": "958:15:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 327,
+                      "id": 399,
                       "name": "thoughtCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
+                      "referencedDeclaration": 300,
                       "src": "958:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1494,32 +1494,32 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 329,
+                  "id": 401,
                   "nodeType": "ExpressionStatement",
                   "src": "958:15:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 331,
+            "id": 403,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "firstThought",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 309,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "823:2:2"
             },
             "returnParameters": {
-              "id": 310,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "833:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "802:176:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1527,31 +1527,31 @@
           },
           {
             "body": {
-              "id": 334,
+              "id": 406,
               "nodeType": "Block",
               "src": "1013:6:2",
               "statements": []
             },
             "documentation": null,
-            "id": 335,
+            "id": 407,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "readThoughts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 332,
+              "id": 404,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1003:2:2"
             },
             "returnParameters": {
-              "id": 333,
+              "id": 405,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1013:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "982:37:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1559,7 +1559,7 @@
           },
           {
             "body": {
-              "id": 370,
+              "id": 442,
               "nodeType": "Block",
               "src": "1070:163:2",
               "statements": [
@@ -1573,7 +1573,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 346,
+                        "id": 418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1582,34 +1582,34 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 341,
+                            "id": 413,
                             "name": "ownerThoughts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 263,
+                            "referencedDeclaration": 335,
                             "src": "1084:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                               "typeString": "mapping(address => uint256)"
                             }
                           },
-                          "id": 344,
+                          "id": 416,
                           "indexExpression": {
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 342,
+                              "id": 414,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 506,
+                              "referencedDeclaration": 578,
                               "src": "1098:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 343,
+                            "id": 415,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1639,7 +1639,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 345,
+                          "id": 417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -1668,21 +1668,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 340,
+                      "id": 412,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        509,
-                        510
+                        581,
+                        582
                       ],
-                      "referencedDeclaration": 509,
+                      "referencedDeclaration": 581,
                       "src": "1076:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 347,
+                    "id": 419,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1696,14 +1696,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 348,
+                  "id": 420,
                   "nodeType": "ExpressionStatement",
                   "src": "1076:39:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 358,
+                    "id": 430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1712,25 +1712,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 349,
+                        "id": 421,
                         "name": "users",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 255,
+                        "referencedDeclaration": 327,
                         "src": "1121:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.User storage ref)"
                         }
                       },
-                      "id": 351,
+                      "id": 423,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 350,
+                        "id": 422,
                         "name": "userCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 231,
+                        "referencedDeclaration": 303,
                         "src": "1127:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1744,7 +1744,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1121:16:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_storage",
+                        "typeIdentifier": "t_struct$_User_$319_storage",
                         "typeString": "struct synapse.User storage ref"
                       }
                     },
@@ -1755,11 +1755,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 353,
+                          "id": 425,
                           "name": "userCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 231,
+                          "referencedDeclaration": 303,
                           "src": "1145:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1768,11 +1768,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 354,
+                          "id": 426,
                           "name": "_handle",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 337,
+                          "referencedDeclaration": 409,
                           "src": "1156:7:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1783,18 +1783,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 355,
+                            "id": 427,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "1165:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 356,
+                          "id": 428,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1824,18 +1824,18 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 352,
+                        "id": 424,
                         "name": "User",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 247,
+                        "referencedDeclaration": 319,
                         "src": "1140:4:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_User_$247_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_User_$319_storage_ptr_$",
                           "typeString": "type(struct synapse.User storage pointer)"
                         }
                       },
-                      "id": 357,
+                      "id": 429,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1845,24 +1845,24 @@
                       "nodeType": "FunctionCall",
                       "src": "1140:36:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_memory",
+                        "typeIdentifier": "t_struct$_User_$319_memory",
                         "typeString": "struct synapse.User memory"
                       }
                     },
                     "src": "1121:55:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_User_$247_storage",
+                      "typeIdentifier": "t_struct$_User_$319_storage",
                       "typeString": "struct synapse.User storage ref"
                     }
                   },
-                  "id": 359,
+                  "id": 431,
                   "nodeType": "ExpressionStatement",
                   "src": "1121:55:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 365,
+                    "id": 437,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1871,34 +1871,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 360,
+                        "id": 432,
                         "name": "handles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 259,
+                        "referencedDeclaration": 331,
                         "src": "1182:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                           "typeString": "mapping(address => string storage ref)"
                         }
                       },
-                      "id": 363,
+                      "id": 435,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 361,
+                          "id": 433,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "1190:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 362,
+                        "id": 434,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1927,11 +1927,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 364,
+                      "id": 436,
                       "name": "_handle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 337,
+                      "referencedDeclaration": 409,
                       "src": "1204:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -1944,14 +1944,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 366,
+                  "id": 438,
                   "nodeType": "ExpressionStatement",
                   "src": "1182:29:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 368,
+                    "id": 440,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1962,11 +1962,11 @@
                     "src": "1217:11:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 367,
+                      "id": 439,
                       "name": "userCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 231,
+                      "referencedDeclaration": 303,
                       "src": "1217:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -1978,29 +1978,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 369,
+                  "id": 441,
                   "nodeType": "ExpressionStatement",
                   "src": "1217:11:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 371,
+            "id": 443,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "newUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 338,
+              "id": 410,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 337,
+                  "id": 409,
                   "name": "_handle",
                   "nodeType": "VariableDeclaration",
-                  "scope": 371,
+                  "scope": 443,
                   "src": "1040:21:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2009,7 +2009,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 336,
+                    "id": 408,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1040:6:2",
@@ -2025,12 +2025,12 @@
               "src": "1039:23:2"
             },
             "returnParameters": {
-              "id": 339,
+              "id": 411,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1070:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "1023:210:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2038,14 +2038,14 @@
           },
           {
             "body": {
-              "id": 396,
+              "id": 468,
               "nodeType": "Block",
               "src": "1299:93:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 387,
+                    "id": 459,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2054,25 +2054,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 378,
+                        "id": 450,
                         "name": "users",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 255,
+                        "referencedDeclaration": 327,
                         "src": "1305:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.User storage ref)"
                         }
                       },
-                      "id": 380,
+                      "id": 452,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 379,
+                        "id": 451,
                         "name": "_user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 375,
+                        "referencedDeclaration": 447,
                         "src": "1311:5:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -2086,7 +2086,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1305:12:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_storage",
+                        "typeIdentifier": "t_struct$_User_$319_storage",
                         "typeString": "struct synapse.User storage ref"
                       }
                     },
@@ -2097,11 +2097,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 382,
+                          "id": 454,
                           "name": "_user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 375,
+                          "referencedDeclaration": 447,
                           "src": "1325:5:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -2110,11 +2110,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 383,
+                          "id": 455,
                           "name": "_handle",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 373,
+                          "referencedDeclaration": 445,
                           "src": "1332:7:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -2125,18 +2125,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 384,
+                            "id": 456,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "1341:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 385,
+                          "id": 457,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -2166,18 +2166,18 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 381,
+                        "id": 453,
                         "name": "User",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 247,
+                        "referencedDeclaration": 319,
                         "src": "1320:4:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_User_$247_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_User_$319_storage_ptr_$",
                           "typeString": "type(struct synapse.User storage pointer)"
                         }
                       },
-                      "id": 386,
+                      "id": 458,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2187,24 +2187,24 @@
                       "nodeType": "FunctionCall",
                       "src": "1320:32:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_memory",
+                        "typeIdentifier": "t_struct$_User_$319_memory",
                         "typeString": "struct synapse.User memory"
                       }
                     },
                     "src": "1305:47:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_User_$247_storage",
+                      "typeIdentifier": "t_struct$_User_$319_storage",
                       "typeString": "struct synapse.User storage ref"
                     }
                   },
-                  "id": 388,
+                  "id": 460,
                   "nodeType": "ExpressionStatement",
                   "src": "1305:47:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 394,
+                    "id": 466,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2213,34 +2213,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 389,
+                        "id": 461,
                         "name": "handles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 259,
+                        "referencedDeclaration": 331,
                         "src": "1358:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                           "typeString": "mapping(address => string storage ref)"
                         }
                       },
-                      "id": 392,
+                      "id": 464,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 390,
+                          "id": 462,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "1366:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 391,
+                        "id": 463,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -2269,11 +2269,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 393,
+                      "id": 465,
                       "name": "_handle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 373,
+                      "referencedDeclaration": 445,
                       "src": "1380:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -2286,29 +2286,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 395,
+                  "id": 467,
                   "nodeType": "ExpressionStatement",
                   "src": "1358:29:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 397,
+            "id": 469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 376,
+              "id": 448,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 445,
                   "name": "_handle",
                   "nodeType": "VariableDeclaration",
-                  "scope": 397,
+                  "scope": 469,
                   "src": "1257:21:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -2317,7 +2317,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 444,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1257:6:2",
@@ -2331,10 +2331,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 375,
+                  "id": 447,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 397,
+                  "scope": 469,
                   "src": "1280:10:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2343,7 +2343,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 374,
+                    "id": 446,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1280:4:2",
@@ -2359,19 +2359,19 @@
               "src": "1256:35:2"
             },
             "returnParameters": {
-              "id": 377,
+              "id": 449,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1299:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "1237:155:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 399,
+        "scope": 471,
         "src": "26:1371:2"
       }
     ],
@@ -2381,14 +2381,14 @@
     "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/synapse.sol",
     "exportedSymbols": {
       "synapse": [
-        398
+        470
       ]
     },
-    "id": 399,
+    "id": 471,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 225,
+        "id": 297,
         "literals": [
           "solidity",
           "^",
@@ -2404,19 +2404,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 398,
+        "id": 470,
         "linearizedBaseContracts": [
-          398
+          470
         ],
         "name": "synapse",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 228,
+            "id": 300,
             "name": "thoughtCount",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "48:28:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2425,7 +2425,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 226,
+              "id": 298,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "48:4:2",
@@ -2437,7 +2437,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 227,
+              "id": 299,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2456,10 +2456,10 @@
           },
           {
             "constant": false,
-            "id": 231,
+            "id": 303,
             "name": "userCount",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "80:18:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2468,7 +2468,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 229,
+              "id": 301,
               "name": "uint",
               "nodeType": "ElementaryTypeName",
               "src": "80:4:2",
@@ -2480,7 +2480,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "30",
-              "id": 230,
+              "id": 302,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -2499,14 +2499,14 @@
           },
           {
             "canonicalName": "synapse.Thought",
-            "id": 240,
+            "id": 312,
             "members": [
               {
                 "constant": false,
-                "id": 233,
+                "id": 305,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "124:7:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2515,7 +2515,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 232,
+                  "id": 304,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "124:4:2",
@@ -2529,10 +2529,10 @@
               },
               {
                 "constant": false,
-                "id": 235,
+                "id": 307,
                 "name": "thought",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "137:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2541,7 +2541,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 234,
+                  "id": 306,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "137:6:2",
@@ -2555,10 +2555,10 @@
               },
               {
                 "constant": false,
-                "id": 237,
+                "id": 309,
                 "name": "sender",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "157:14:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2567,7 +2567,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 236,
+                  "id": 308,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "157:7:2",
@@ -2582,10 +2582,10 @@
               },
               {
                 "constant": false,
-                "id": 239,
+                "id": 311,
                 "name": "handle",
                 "nodeType": "VariableDeclaration",
-                "scope": 240,
+                "scope": 312,
                 "src": "177:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2594,7 +2594,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 238,
+                  "id": 310,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "177:6:2",
@@ -2609,20 +2609,20 @@
             ],
             "name": "Thought",
             "nodeType": "StructDefinition",
-            "scope": 398,
+            "scope": 470,
             "src": "103:92:2",
             "visibility": "public"
           },
           {
             "canonicalName": "synapse.User",
-            "id": 247,
+            "id": 319,
             "members": [
               {
                 "constant": false,
-                "id": 242,
+                "id": 314,
                 "name": "id",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "217:7:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2631,7 +2631,7 @@
                   "typeString": "uint256"
                 },
                 "typeName": {
-                  "id": 241,
+                  "id": 313,
                   "name": "uint",
                   "nodeType": "ElementaryTypeName",
                   "src": "217:4:2",
@@ -2645,10 +2645,10 @@
               },
               {
                 "constant": false,
-                "id": 244,
+                "id": 316,
                 "name": "handle",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "230:13:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2657,7 +2657,7 @@
                   "typeString": "string"
                 },
                 "typeName": {
-                  "id": 243,
+                  "id": 315,
                   "name": "string",
                   "nodeType": "ElementaryTypeName",
                   "src": "230:6:2",
@@ -2671,10 +2671,10 @@
               },
               {
                 "constant": false,
-                "id": 246,
+                "id": 318,
                 "name": "user",
                 "nodeType": "VariableDeclaration",
-                "scope": 247,
+                "scope": 319,
                 "src": "249:12:2",
                 "stateVariable": false,
                 "storageLocation": "default",
@@ -2683,7 +2683,7 @@
                   "typeString": "address"
                 },
                 "typeName": {
-                  "id": 245,
+                  "id": 317,
                   "name": "address",
                   "nodeType": "ElementaryTypeName",
                   "src": "249:7:2",
@@ -2699,27 +2699,27 @@
             ],
             "name": "User",
             "nodeType": "StructDefinition",
-            "scope": 398,
+            "scope": 470,
             "src": "199:67:2",
             "visibility": "public"
           },
           {
             "constant": false,
-            "id": 251,
+            "id": 323,
             "name": "thoughts",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "303:40:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
               "typeString": "mapping(uint256 => struct synapse.Thought)"
             },
             "typeName": {
-              "id": 250,
+              "id": 322,
               "keyType": {
-                "id": 248,
+                "id": 320,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "311:4:2",
@@ -2731,18 +2731,18 @@
               "nodeType": "Mapping",
               "src": "303:24:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                 "typeString": "mapping(uint256 => struct synapse.Thought)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 249,
+                "id": 321,
                 "name": "Thought",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 240,
+                "referencedDeclaration": 312,
                 "src": "319:7:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_Thought_$240_storage_ptr",
+                  "typeIdentifier": "t_struct$_Thought_$312_storage_ptr",
                   "typeString": "struct synapse.Thought"
                 }
               }
@@ -2752,21 +2752,21 @@
           },
           {
             "constant": false,
-            "id": 255,
+            "id": 327,
             "name": "users",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "347:34:2",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
               "typeString": "mapping(uint256 => struct synapse.User)"
             },
             "typeName": {
-              "id": 254,
+              "id": 326,
               "keyType": {
-                "id": 252,
+                "id": 324,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "355:4:2",
@@ -2778,18 +2778,18 @@
               "nodeType": "Mapping",
               "src": "347:21:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                 "typeString": "mapping(uint256 => struct synapse.User)"
               },
               "valueType": {
                 "contractScope": null,
-                "id": 253,
+                "id": 325,
                 "name": "User",
                 "nodeType": "UserDefinedTypeName",
-                "referencedDeclaration": 247,
+                "referencedDeclaration": 319,
                 "src": "363:4:2",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_struct$_User_$247_storage_ptr",
+                  "typeIdentifier": "t_struct$_User_$319_storage_ptr",
                   "typeString": "struct synapse.User"
                 }
               }
@@ -2799,10 +2799,10 @@
           },
           {
             "constant": false,
-            "id": 259,
+            "id": 331,
             "name": "handles",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "385:35:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2811,9 +2811,9 @@
               "typeString": "mapping(address => string)"
             },
             "typeName": {
-              "id": 258,
+              "id": 330,
               "keyType": {
-                "id": 256,
+                "id": 328,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "394:7:2",
@@ -2829,7 +2829,7 @@
                 "typeString": "mapping(address => string)"
               },
               "valueType": {
-                "id": 257,
+                "id": 329,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
                 "src": "405:6:2",
@@ -2844,10 +2844,10 @@
           },
           {
             "constant": false,
-            "id": 263,
+            "id": 335,
             "name": "ownerThoughts",
             "nodeType": "VariableDeclaration",
-            "scope": 398,
+            "scope": 470,
             "src": "424:39:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -2856,9 +2856,9 @@
               "typeString": "mapping(address => uint256)"
             },
             "typeName": {
-              "id": 262,
+              "id": 334,
               "keyType": {
-                "id": 260,
+                "id": 332,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "433:7:2",
@@ -2874,7 +2874,7 @@
                 "typeString": "mapping(address => uint256)"
               },
               "valueType": {
-                "id": 261,
+                "id": 333,
                 "name": "uint",
                 "nodeType": "ElementaryTypeName",
                 "src": "444:4:2",
@@ -2889,7 +2889,7 @@
           },
           {
             "body": {
-              "id": 269,
+              "id": 341,
               "nodeType": "Block",
               "src": "491:25:2",
               "statements": [
@@ -2899,18 +2899,18 @@
                     "arguments": [],
                     "expression": {
                       "argumentTypes": [],
-                      "id": 266,
+                      "id": 338,
                       "name": "firstThought",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 331,
+                      "referencedDeclaration": 403,
                       "src": "497:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
                         "typeString": "function ()"
                       }
                     },
-                    "id": 267,
+                    "id": 339,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2924,32 +2924,32 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 268,
+                  "id": 340,
                   "nodeType": "ExpressionStatement",
                   "src": "497:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 270,
+            "id": 342,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 264,
+              "id": 336,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "481:2:2"
             },
             "returnParameters": {
-              "id": 265,
+              "id": 337,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "491:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "469:47:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2957,31 +2957,31 @@
           },
           {
             "body": {
-              "id": 273,
+              "id": 345,
               "nodeType": "Block",
               "src": "547:6:2",
               "statements": []
             },
             "documentation": null,
-            "id": 274,
+            "id": 346,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "getUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 271,
+              "id": 343,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "537:2:2"
             },
             "returnParameters": {
-              "id": 272,
+              "id": 344,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "547:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "520:33:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -2989,21 +2989,21 @@
           },
           {
             "body": {
-              "id": 307,
+              "id": 379,
               "nodeType": "Block",
               "src": "611:186:2",
               "statements": [
                 {
                   "assignments": [
-                    280
+                    352
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 280,
+                      "id": 352,
                       "name": "user",
                       "nodeType": "VariableDeclaration",
-                      "scope": 307,
+                      "scope": 379,
                       "src": "618:18:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -3012,7 +3012,7 @@
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 279,
+                        "id": 351,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
                         "src": "618:6:2",
@@ -3025,39 +3025,39 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 285,
+                  "id": 357,
                   "initialValue": {
                     "argumentTypes": null,
                     "baseExpression": {
                       "argumentTypes": null,
-                      "id": 281,
+                      "id": 353,
                       "name": "handles",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 259,
+                      "referencedDeclaration": 331,
                       "src": "639:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                         "typeString": "mapping(address => string storage ref)"
                       }
                     },
-                    "id": 284,
+                    "id": 356,
                     "indexExpression": {
                       "argumentTypes": null,
                       "expression": {
                         "argumentTypes": null,
-                        "id": 282,
+                        "id": 354,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 506,
+                        "referencedDeclaration": 578,
                         "src": "647:3:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 283,
+                      "id": 355,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3088,7 +3088,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 296,
+                    "id": 368,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3097,25 +3097,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 286,
+                        "id": 358,
                         "name": "thoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 251,
+                        "referencedDeclaration": 323,
                         "src": "665:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.Thought storage ref)"
                         }
                       },
-                      "id": 288,
+                      "id": 360,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 287,
+                        "id": 359,
                         "name": "thoughtCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 228,
+                        "referencedDeclaration": 300,
                         "src": "674:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3129,7 +3129,7 @@
                       "nodeType": "IndexAccess",
                       "src": "665:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_storage",
+                        "typeIdentifier": "t_struct$_Thought_$312_storage",
                         "typeString": "struct synapse.Thought storage ref"
                       }
                     },
@@ -3140,11 +3140,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 290,
+                          "id": 362,
                           "name": "thoughtCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 228,
+                          "referencedDeclaration": 300,
                           "src": "698:12:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3153,11 +3153,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 291,
+                          "id": 363,
                           "name": "_content",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 276,
+                          "referencedDeclaration": 348,
                           "src": "712:8:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3168,18 +3168,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 292,
+                            "id": 364,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "722:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 293,
+                          "id": 365,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3195,11 +3195,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 294,
+                          "id": 366,
                           "name": "user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 280,
+                          "referencedDeclaration": 352,
                           "src": "734:4:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3226,18 +3226,18 @@
                             "typeString": "string memory"
                           }
                         ],
-                        "id": 289,
+                        "id": 361,
                         "name": "Thought",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
+                        "referencedDeclaration": 312,
                         "src": "690:7:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Thought_$240_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Thought_$312_storage_ptr_$",
                           "typeString": "type(struct synapse.Thought storage pointer)"
                         }
                       },
-                      "id": 295,
+                      "id": 367,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3247,24 +3247,24 @@
                       "nodeType": "FunctionCall",
                       "src": "690:49:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_memory",
+                        "typeIdentifier": "t_struct$_Thought_$312_memory",
                         "typeString": "struct synapse.Thought memory"
                       }
                     },
                     "src": "665:74:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Thought_$240_storage",
+                      "typeIdentifier": "t_struct$_Thought_$312_storage",
                       "typeString": "struct synapse.Thought storage ref"
                     }
                   },
-                  "id": 297,
+                  "id": 369,
                   "nodeType": "ExpressionStatement",
                   "src": "665:74:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 302,
+                    "id": 374,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3277,34 +3277,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 298,
+                        "id": 370,
                         "name": "ownerThoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 263,
+                        "referencedDeclaration": 335,
                         "src": "745:13:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                           "typeString": "mapping(address => uint256)"
                         }
                       },
-                      "id": 301,
+                      "id": 373,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 299,
+                          "id": 371,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "759:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 300,
+                        "id": 372,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3334,14 +3334,14 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 303,
+                  "id": 375,
                   "nodeType": "ExpressionStatement",
                   "src": "745:27:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 305,
+                    "id": 377,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3352,11 +3352,11 @@
                     "src": "778:14:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 304,
+                      "id": 376,
                       "name": "thoughtCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
+                      "referencedDeclaration": 300,
                       "src": "778:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3368,29 +3368,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 306,
+                  "id": 378,
                   "nodeType": "ExpressionStatement",
                   "src": "778:14:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 308,
+            "id": 380,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "createThought",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 277,
+              "id": 349,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 276,
+                  "id": 348,
                   "name": "_content",
                   "nodeType": "VariableDeclaration",
-                  "scope": 308,
+                  "scope": 380,
                   "src": "580:22:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -3399,7 +3399,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 275,
+                    "id": 347,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "580:6:2",
@@ -3415,12 +3415,12 @@
               "src": "579:24:2"
             },
             "returnParameters": {
-              "id": 278,
+              "id": 350,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "611:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "557:240:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3428,21 +3428,21 @@
           },
           {
             "body": {
-              "id": 330,
+              "id": 402,
               "nodeType": "Block",
               "src": "833:145:2",
               "statements": [
                 {
                   "assignments": [
-                    312
+                    384
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 312,
+                      "id": 384,
                       "name": "ft",
                       "nodeType": "VariableDeclaration",
-                      "scope": 330,
+                      "scope": 402,
                       "src": "839:16:2",
                       "stateVariable": false,
                       "storageLocation": "memory",
@@ -3451,7 +3451,7 @@
                         "typeString": "string"
                       },
                       "typeName": {
-                        "id": 311,
+                        "id": 383,
                         "name": "string",
                         "nodeType": "ElementaryTypeName",
                         "src": "839:6:2",
@@ -3464,11 +3464,11 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 314,
+                  "id": 386,
                   "initialValue": {
                     "argumentTypes": null,
                     "hexValue": "48656c6c6f2c20576f726c6421",
-                    "id": 313,
+                    "id": 385,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -3489,7 +3489,7 @@
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 325,
+                    "id": 397,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3498,25 +3498,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 315,
+                        "id": 387,
                         "name": "thoughts",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 251,
+                        "referencedDeclaration": 323,
                         "src": "879:8:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$240_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Thought_$312_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.Thought storage ref)"
                         }
                       },
-                      "id": 317,
+                      "id": 389,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 316,
+                        "id": 388,
                         "name": "thoughtCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 228,
+                        "referencedDeclaration": 300,
                         "src": "888:12:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3530,7 +3530,7 @@
                       "nodeType": "IndexAccess",
                       "src": "879:22:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_storage",
+                        "typeIdentifier": "t_struct$_Thought_$312_storage",
                         "typeString": "struct synapse.Thought storage ref"
                       }
                     },
@@ -3541,11 +3541,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 319,
+                          "id": 391,
                           "name": "thoughtCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 228,
+                          "referencedDeclaration": 300,
                           "src": "912:12:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3554,11 +3554,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 320,
+                          "id": 392,
                           "name": "ft",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 312,
+                          "referencedDeclaration": 384,
                           "src": "926:2:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3569,18 +3569,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 321,
+                            "id": 393,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "930:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 322,
+                          "id": 394,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -3597,7 +3597,7 @@
                         {
                           "argumentTypes": null,
                           "hexValue": "67656e65736973",
-                          "id": 323,
+                          "id": 395,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3632,18 +3632,18 @@
                             "typeString": "literal_string \"genesis\""
                           }
                         ],
-                        "id": 318,
+                        "id": 390,
                         "name": "Thought",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 240,
+                        "referencedDeclaration": 312,
                         "src": "904:7:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Thought_$240_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_Thought_$312_storage_ptr_$",
                           "typeString": "type(struct synapse.Thought storage pointer)"
                         }
                       },
-                      "id": 324,
+                      "id": 396,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -3653,24 +3653,24 @@
                       "nodeType": "FunctionCall",
                       "src": "904:48:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Thought_$240_memory",
+                        "typeIdentifier": "t_struct$_Thought_$312_memory",
                         "typeString": "struct synapse.Thought memory"
                       }
                     },
                     "src": "879:73:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_Thought_$240_storage",
+                      "typeIdentifier": "t_struct$_Thought_$312_storage",
                       "typeString": "struct synapse.Thought storage ref"
                     }
                   },
-                  "id": 326,
+                  "id": 398,
                   "nodeType": "ExpressionStatement",
                   "src": "879:73:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 328,
+                    "id": 400,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3681,11 +3681,11 @@
                     "src": "958:15:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 327,
+                      "id": 399,
                       "name": "thoughtCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 228,
+                      "referencedDeclaration": 300,
                       "src": "958:12:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -3697,32 +3697,32 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 329,
+                  "id": 401,
                   "nodeType": "ExpressionStatement",
                   "src": "958:15:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 331,
+            "id": 403,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "firstThought",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 309,
+              "id": 381,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "823:2:2"
             },
             "returnParameters": {
-              "id": 310,
+              "id": 382,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "833:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "802:176:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3730,31 +3730,31 @@
           },
           {
             "body": {
-              "id": 334,
+              "id": 406,
               "nodeType": "Block",
               "src": "1013:6:2",
               "statements": []
             },
             "documentation": null,
-            "id": 335,
+            "id": 407,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "readThoughts",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 332,
+              "id": 404,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1003:2:2"
             },
             "returnParameters": {
-              "id": 333,
+              "id": 405,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1013:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "982:37:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -3762,7 +3762,7 @@
           },
           {
             "body": {
-              "id": 370,
+              "id": 442,
               "nodeType": "Block",
               "src": "1070:163:2",
               "statements": [
@@ -3776,7 +3776,7 @@
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         },
-                        "id": 346,
+                        "id": 418,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -3785,34 +3785,34 @@
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 341,
+                            "id": 413,
                             "name": "ownerThoughts",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 263,
+                            "referencedDeclaration": 335,
                             "src": "1084:13:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                               "typeString": "mapping(address => uint256)"
                             }
                           },
-                          "id": 344,
+                          "id": 416,
                           "indexExpression": {
                             "argumentTypes": null,
                             "expression": {
                               "argumentTypes": null,
-                              "id": 342,
+                              "id": 414,
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 506,
+                              "referencedDeclaration": 578,
                               "src": "1098:3:2",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
                                 "typeString": "msg"
                               }
                             },
-                            "id": 343,
+                            "id": 415,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -3842,7 +3842,7 @@
                         "rightExpression": {
                           "argumentTypes": null,
                           "hexValue": "30",
-                          "id": 345,
+                          "id": 417,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -3871,21 +3871,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 340,
+                      "id": 412,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        509,
-                        510
+                        581,
+                        582
                       ],
-                      "referencedDeclaration": 509,
+                      "referencedDeclaration": 581,
                       "src": "1076:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 347,
+                    "id": 419,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3899,14 +3899,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 348,
+                  "id": 420,
                   "nodeType": "ExpressionStatement",
                   "src": "1076:39:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 358,
+                    "id": 430,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -3915,25 +3915,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 349,
+                        "id": 421,
                         "name": "users",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 255,
+                        "referencedDeclaration": 327,
                         "src": "1121:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.User storage ref)"
                         }
                       },
-                      "id": 351,
+                      "id": 423,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 350,
+                        "id": 422,
                         "name": "userCount",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 231,
+                        "referencedDeclaration": 303,
                         "src": "1127:9:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -3947,7 +3947,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1121:16:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_storage",
+                        "typeIdentifier": "t_struct$_User_$319_storage",
                         "typeString": "struct synapse.User storage ref"
                       }
                     },
@@ -3958,11 +3958,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 353,
+                          "id": 425,
                           "name": "userCount",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 231,
+                          "referencedDeclaration": 303,
                           "src": "1145:9:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -3971,11 +3971,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 354,
+                          "id": 426,
                           "name": "_handle",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 337,
+                          "referencedDeclaration": 409,
                           "src": "1156:7:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -3986,18 +3986,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 355,
+                            "id": 427,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "1165:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 356,
+                          "id": 428,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4027,18 +4027,18 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 352,
+                        "id": 424,
                         "name": "User",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 247,
+                        "referencedDeclaration": 319,
                         "src": "1140:4:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_User_$247_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_User_$319_storage_ptr_$",
                           "typeString": "type(struct synapse.User storage pointer)"
                         }
                       },
-                      "id": 357,
+                      "id": 429,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4048,24 +4048,24 @@
                       "nodeType": "FunctionCall",
                       "src": "1140:36:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_memory",
+                        "typeIdentifier": "t_struct$_User_$319_memory",
                         "typeString": "struct synapse.User memory"
                       }
                     },
                     "src": "1121:55:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_User_$247_storage",
+                      "typeIdentifier": "t_struct$_User_$319_storage",
                       "typeString": "struct synapse.User storage ref"
                     }
                   },
-                  "id": 359,
+                  "id": 431,
                   "nodeType": "ExpressionStatement",
                   "src": "1121:55:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 365,
+                    "id": 437,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4074,34 +4074,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 360,
+                        "id": 432,
                         "name": "handles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 259,
+                        "referencedDeclaration": 331,
                         "src": "1182:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                           "typeString": "mapping(address => string storage ref)"
                         }
                       },
-                      "id": 363,
+                      "id": 435,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 361,
+                          "id": 433,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "1190:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 362,
+                        "id": 434,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4130,11 +4130,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 364,
+                      "id": 436,
                       "name": "_handle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 337,
+                      "referencedDeclaration": 409,
                       "src": "1204:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -4147,14 +4147,14 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 366,
+                  "id": 438,
                   "nodeType": "ExpressionStatement",
                   "src": "1182:29:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 368,
+                    "id": 440,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4165,11 +4165,11 @@
                     "src": "1217:11:2",
                     "subExpression": {
                       "argumentTypes": null,
-                      "id": 367,
+                      "id": 439,
                       "name": "userCount",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 231,
+                      "referencedDeclaration": 303,
                       "src": "1217:9:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -4181,29 +4181,29 @@
                       "typeString": "uint256"
                     }
                   },
-                  "id": 369,
+                  "id": 441,
                   "nodeType": "ExpressionStatement",
                   "src": "1217:11:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 371,
+            "id": 443,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "newUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 338,
+              "id": 410,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 337,
+                  "id": 409,
                   "name": "_handle",
                   "nodeType": "VariableDeclaration",
-                  "scope": 371,
+                  "scope": 443,
                   "src": "1040:21:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4212,7 +4212,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 336,
+                    "id": 408,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1040:6:2",
@@ -4228,12 +4228,12 @@
               "src": "1039:23:2"
             },
             "returnParameters": {
-              "id": 339,
+              "id": 411,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1070:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "1023:210:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -4241,14 +4241,14 @@
           },
           {
             "body": {
-              "id": 396,
+              "id": 468,
               "nodeType": "Block",
               "src": "1299:93:2",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 387,
+                    "id": 459,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4257,25 +4257,25 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 378,
+                        "id": 450,
                         "name": "users",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 255,
+                        "referencedDeclaration": 327,
                         "src": "1305:5:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$247_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_User_$319_storage_$",
                           "typeString": "mapping(uint256 => struct synapse.User storage ref)"
                         }
                       },
-                      "id": 380,
+                      "id": 452,
                       "indexExpression": {
                         "argumentTypes": null,
-                        "id": 379,
+                        "id": 451,
                         "name": "_user",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 375,
+                        "referencedDeclaration": 447,
                         "src": "1311:5:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -4289,7 +4289,7 @@
                       "nodeType": "IndexAccess",
                       "src": "1305:12:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_storage",
+                        "typeIdentifier": "t_struct$_User_$319_storage",
                         "typeString": "struct synapse.User storage ref"
                       }
                     },
@@ -4300,11 +4300,11 @@
                       "arguments": [
                         {
                           "argumentTypes": null,
-                          "id": 382,
+                          "id": 454,
                           "name": "_user",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 375,
+                          "referencedDeclaration": 447,
                           "src": "1325:5:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -4313,11 +4313,11 @@
                         },
                         {
                           "argumentTypes": null,
-                          "id": 383,
+                          "id": 455,
                           "name": "_handle",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 373,
+                          "referencedDeclaration": 445,
                           "src": "1332:7:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -4328,18 +4328,18 @@
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
-                            "id": 384,
+                            "id": 456,
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 506,
+                            "referencedDeclaration": 578,
                             "src": "1341:3:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
                             }
                           },
-                          "id": 385,
+                          "id": 457,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -4369,18 +4369,18 @@
                             "typeString": "address payable"
                           }
                         ],
-                        "id": 381,
+                        "id": 453,
                         "name": "User",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 247,
+                        "referencedDeclaration": 319,
                         "src": "1320:4:2",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_User_$247_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_User_$319_storage_ptr_$",
                           "typeString": "type(struct synapse.User storage pointer)"
                         }
                       },
-                      "id": 386,
+                      "id": 458,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -4390,24 +4390,24 @@
                       "nodeType": "FunctionCall",
                       "src": "1320:32:2",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_User_$247_memory",
+                        "typeIdentifier": "t_struct$_User_$319_memory",
                         "typeString": "struct synapse.User memory"
                       }
                     },
                     "src": "1305:47:2",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_User_$247_storage",
+                      "typeIdentifier": "t_struct$_User_$319_storage",
                       "typeString": "struct synapse.User storage ref"
                     }
                   },
-                  "id": 388,
+                  "id": 460,
                   "nodeType": "ExpressionStatement",
                   "src": "1305:47:2"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 394,
+                    "id": 466,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -4416,34 +4416,34 @@
                       "argumentTypes": null,
                       "baseExpression": {
                         "argumentTypes": null,
-                        "id": 389,
+                        "id": 461,
                         "name": "handles",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 259,
+                        "referencedDeclaration": 331,
                         "src": "1358:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_string_storage_$",
                           "typeString": "mapping(address => string storage ref)"
                         }
                       },
-                      "id": 392,
+                      "id": 464,
                       "indexExpression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
-                          "id": 390,
+                          "id": 462,
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 506,
+                          "referencedDeclaration": 578,
                           "src": "1366:3:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
                           }
                         },
-                        "id": 391,
+                        "id": 463,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -4472,11 +4472,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 393,
+                      "id": 465,
                       "name": "_handle",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 373,
+                      "referencedDeclaration": 445,
                       "src": "1380:7:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_memory_ptr",
@@ -4489,29 +4489,29 @@
                       "typeString": "string storage ref"
                     }
                   },
-                  "id": 395,
+                  "id": 467,
                   "nodeType": "ExpressionStatement",
                   "src": "1358:29:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 397,
+            "id": 469,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "updateUser",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 376,
+              "id": 448,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 373,
+                  "id": 445,
                   "name": "_handle",
                   "nodeType": "VariableDeclaration",
-                  "scope": 397,
+                  "scope": 469,
                   "src": "1257:21:2",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -4520,7 +4520,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 372,
+                    "id": 444,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "1257:6:2",
@@ -4534,10 +4534,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 375,
+                  "id": 447,
                   "name": "_user",
                   "nodeType": "VariableDeclaration",
-                  "scope": 397,
+                  "scope": 469,
                   "src": "1280:10:2",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -4546,7 +4546,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 374,
+                    "id": 446,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "1280:4:2",
@@ -4562,19 +4562,19 @@
               "src": "1256:35:2"
             },
             "returnParameters": {
-              "id": 377,
+              "id": 449,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "1299:0:2"
             },
-            "scope": 398,
+            "scope": 470,
             "src": "1237:155:2",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 399,
+        "scope": 471,
         "src": "26:1371:2"
       }
     ],
@@ -4584,17 +4584,9 @@
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0xf8b8fE505F61d6F457822169027a6B71B5a4246D",
-      "transactionHash": "0xfa4804da015c5e9956700b3460c4a86ca98838a7ca71c71067ab7f11f4fdc954"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-02-13T04:24:39.258Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-02-13T06:45:18.269Z",
   "devdoc": {
     "methods": {}
   },
