@@ -6,6 +6,9 @@ import text from './public/home/text.png';
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from './config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from './config'
 import Thought from './createThought'
+import Thoughts from './thoughts'
+
+
 
 
 function isInstalled() {
@@ -37,12 +40,13 @@ class App extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
+    this.forceUpdate()
   }
-    
+
   componentDidMount(){
     document.title = "Synapse App"
   }
-  
+
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -54,6 +58,10 @@ class App extends Component {
     else {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
+  }
+
+  async componentWillUnmount() {
+  clearInterval(this.interval);
   }
 
 
@@ -74,6 +82,8 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
 
+    
+    
     this.setState({ profile })
     this.setState({ thoughtCount })
 
@@ -87,16 +97,17 @@ class App extends Component {
     const latest = latestCall.thought
 
 
-    if (thoughtCount < 10) {
-      for (var i = thoughtCount; i >= 0; i--) {
+    if (thoughtCount < 5) {
+      for (var i = thoughtCount-1; i >= 0; i--) {
         const singleThought = await profile.methods.thoughts(i).call()
         this.setState({
           thoughts: [...this.state.thoughts, singleThought]
+          //thoughts: [...this.setState({thoughts: [...this.state.thoughts, singleThought]})]
         })
       }
     }
     else {
-      for (var i = thoughtCount; i >= (thoughtCount-10); i--) {
+      for (var i = thoughtCount-1; i >= (thoughtCount-5); i--) {
         const singleThought = await profile.methods.thoughts(i).call()
         this.setState({
           thoughts: [...this.state.thoughts, singleThought]
@@ -107,7 +118,8 @@ class App extends Component {
 
     this.setState({ account: accounts[0], balance: balance, latest: latest })
     this.setState({ loading: false })
-
+    
+    
   }
 
   constructor(props) {
@@ -117,23 +129,55 @@ class App extends Component {
       balance: '',
       myString: '',
       thoughts: [],
-      loading: true
-
+      loading: true,
+      username: '',
+      newUsername: '',
     }
     this.createThought = this.createThought.bind(this)
+    this.setUsername = this.setUsername.bind(this)
+    this.handleNewUsernameSubmit = this.handleNewUsernameSubmit.bind(this)
   }
 
 
   createThought(string) {
+
+    //const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
 
     this.setState({ loading: true })
     this.state.profile.methods.createThought(string).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
+
+  }
+  
+  setUsername(string) {
+
+    this.setState({ loading: true })
+    this.state.profile.methods.setUsername(string).send({ from: this.state.account })
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+
   }
 
-
+  getUsername(string) {
+      this.setState({ loading: true })
+      this.state.username = this.state.profile.methods.getUsername(string).call()
+      .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+  }
+  
+  handleNewUsernameSubmit(event) {    
+    event.preventDefault();
+    this.setState({newUsername: event.target.newUsername});
+    this.setState({ loading: true })
+    this.state.profile.methods.setUsername(this.state.newUsername).send({ from: this.state.account })
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+  }
 
 
 
@@ -143,7 +187,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
 
-        <table id="t01">
+        <table id="t02">
           <tr>
             <th><p>Account: </p></th>
             <th><p>{this.state.account}</p></th>
@@ -152,8 +196,25 @@ class App extends Component {
             <th><p>Balance: </p></th>
             <th><p>{this.state.balance}</p></th>
           </tr>
+          <tr>
+            <th><p>Username: </p></th>
+            <th><p>{this.state.username}</p></th>
+          </tr>
         </table>
 
+        
+        
+          <p> Change username</p>
+          
+          <form onSubmit={this.handleNewUsernameSubmit}>
+          <label>
+            New username:
+            <input type="text" />
+            </label>
+            <input type="submit" value="Submit" />
+            
+          </form>
+          
           <p>
             Welcome to
           </p>
@@ -179,10 +240,18 @@ class App extends Component {
               { this.state.loading
                 ? <div id="loader" className=""><p className="">Loading...</p></div>
                 : <Thought
+                  //thoughts={this.state.thoughts}
+                  //createThought={this.createThought}
+
                   thoughts={this.state.thoughts}
                   createThought={this.createThought}
+
                  />
+
               }
+
+              <Thoughts
+              />
             </main>
 
             <p></p>
