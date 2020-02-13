@@ -7,6 +7,7 @@ import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from './config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from './config'
 import Thought from './createThought'
 import Thoughts from './thoughts'
+import ChangeHandle from './changeHandle'
 
 
 
@@ -128,6 +129,7 @@ class App extends Component {
 
     }
     this.createThought = this.createThought.bind(this)
+    this.changeHandle = this.changeHandle.bind(this)
   }
 
 
@@ -137,6 +139,17 @@ class App extends Component {
 
     this.setState({ loading: true })
     this.state.profile.methods.createThought(string).send({ from: this.state.account })
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+
+  }
+
+
+  changeHandle(string) {
+
+    this.setState({ loading: true })
+    this.state.profile.methods.updateUser(string).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
     })
@@ -201,6 +214,12 @@ class App extends Component {
 
               <Thoughts
               />
+
+              <br />
+
+              <ChangeHandle
+                changeHandle={this.changeHandle}
+               />
             </main>
 
             <p></p>
