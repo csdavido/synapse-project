@@ -1,0 +1,208 @@
+{
+  "contractName": "test",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "myString",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"myString\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol\":\"test\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol\":{\"keccak256\":\"0x76d35fe3d5eb3e6436e715f93a516a8ddaff95271c3a689fe7acdf13d9218c62\",\"urls\":[\"bzz-raw://f4b0a45c5043184dd3a20acdabe12587e005d14e7a4e528c99c8b16d201d444d\",\"dweb:/ipfs/QmWCr5NN4Pi16ihRsNpGQ9yMLJPtWV6eQBjwVBpFJDTGE9\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280601181526020017f48656c6c6f2c20537570657273746172210000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b610186806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063492bfa1814610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a723158205395e1f60808597c884b682667258184ffc0a73377f5cda91256017170c6afb764736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063492bfa1814610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101495780601f1061011e57610100808354040283529160200191610149565b820191906000526020600020905b81548152906001019060200180831161012c57829003601f168201915b50505050508156fea265627a7a723158205395e1f60808597c884b682667258184ffc0a73377f5cda91256017170c6afb764736f6c63430005100032",
+  "sourceMap": "26:67:3:-;;;45:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;26:67;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:67:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "26:67:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:67:3;;;;;;;;;;;;;;;;;;;45:44;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;45:44:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\ncontract test {\n\n  string public myString = \"Hello, Superstar!\";\n\n}\n",
+  "sourcePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol",
+  "ast": {
+    "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol",
+    "exportedSymbols": {
+      "test": [
+        404
+      ]
+    },
+    "id": 405,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 400,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 404,
+        "linearizedBaseContracts": [
+          404
+        ],
+        "name": "test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 403,
+            "name": "myString",
+            "nodeType": "VariableDeclaration",
+            "scope": 404,
+            "src": "45:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 401,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "45:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "48656c6c6f2c2053757065727374617221",
+              "id": 402,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "70:19:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3cbef19ba9cd28c5889e19a07c3610e7297a39004194958ab790781ccdea1953",
+                "typeString": "literal_string \"Hello, Superstar!\""
+              },
+              "value": "Hello, Superstar!"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 405,
+        "src": "26:67:3"
+      }
+    ],
+    "src": "0:94:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/reuben/Desktop/school/osu/capstone/synapse-project/contracts/test.sol",
+    "exportedSymbols": {
+      "test": [
+        404
+      ]
+    },
+    "id": 405,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 400,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 404,
+        "linearizedBaseContracts": [
+          404
+        ],
+        "name": "test",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 403,
+            "name": "myString",
+            "nodeType": "VariableDeclaration",
+            "scope": 404,
+            "src": "45:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 401,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "45:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "48656c6c6f2c2053757065727374617221",
+              "id": 402,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "70:19:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_3cbef19ba9cd28c5889e19a07c3610e7297a39004194958ab790781ccdea1953",
+                "typeString": "literal_string \"Hello, Superstar!\""
+              },
+              "value": "Hello, Superstar!"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 405,
+        "src": "26:67:3"
+      }
+    ],
+    "src": "0:94:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2020-02-13T04:24:12.460Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

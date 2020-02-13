@@ -138,6 +138,7 @@ class Thoughts extends Component {
                       <div class="thought-info">
                         <span>@{thought.user}</span>
                         <p>{thought.thought}</p>
+                        <p>-{thought.handle}</p>
                       </div>
                     </div>
 

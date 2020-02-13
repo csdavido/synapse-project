@@ -87,8 +87,6 @@ class App extends Component {
 
     var balance = balanceWei/1000000000000000000
 
-    const myString = await synapse.methods.myString().call()
-
     var thoughtCount = await profile.methods.thoughtCount().call()
 
     const latestCall = await profile.methods.thoughts(thoughtCount-1).call()
