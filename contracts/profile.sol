@@ -78,21 +78,28 @@ contract profile {
       userCount++;
     }
 
-    function updateUser(string memory _handle) public {
+    function updateUser(string memory _handle) public returns (uint) {
 
       uint sndr = senderID[msg.sender];
 
       if (senderThoughts[msg.sender] == 0) {
         firstThought(_handle);
+        return 1;
       }
 
       else {
+
+        string memory handleStorage = handles[msg.sender];
+
         if (handleList[_handle] == 0) {
           users[sndr] = User(sndr, _handle, msg.sender);
           handles[msg.sender] = _handle;
+          handleList[handleStorage] = 0;
+          handleList[_handle] = 1;
+          return 2;
         }
         else {
-          handleList[_handle] = 1;
+          return 3;
         }
       }
     }

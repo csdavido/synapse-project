@@ -1,6 +1,13 @@
-//export const SYNAPSE_ADDRESS = '0xf8b8fE505F61d6F457822169027a6B71B5a4246D'
-//export const SYNAPSE_ADDRESS = '0x458b2a90c2d87cfc8bfb8722873345bc081dc199'
-export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
+import Profile from './contractsABI/profile.json'
+
+import Synapse from './contractsABI/synapse.json'
+
+
+//Ganache
+export const SYNAPSE_ADDRESS = '0xAb771199814980ebc0F18Fd59EBAfb5553127ED6'
+
+//Ropsten
+//export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
 
 
 
@@ -174,9 +181,16 @@ export const SYNAPSE_ABI = [
 
 
 
-//export const PROFILE_ADDRESS = '0x36aCcAb7A77f4F6A0c7AaD1c4Ca380c95a73Ec95'
-//export const PROFILE_ADDRESS = '0xb9b8a34c36810ba23e54df66646dfb26e93af8d7'
-export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
+//Ganache
+export const PROFILE_ADDRESS = '0xcbFB8E2D34f5f3E34b800DAcE78e28D3466965D0'
+
+//Ropsten
+//export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
+
+export const PROFILE_ABI = Profile.abi
+
+/*
+
 
 export const PROFILE_ABI = [
 	{
@@ -355,3 +369,5 @@ export const PROFILE_ABI = [
 		"type": "function"
 	}
 ]
+
+*/
