@@ -12,7 +12,6 @@ import Logo from '../components/logo.js'
 
 
 
-
 function isInstalled() {
    if (typeof Web3 !== 'undefined'){
       console.log('MetaMask is installed')
@@ -193,8 +192,7 @@ class Public extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <Logo bal={this.state.balance}/>
-
+          <Logo bal={this.state.balance}/>
         <div className = "formDiv">
           <br />
           <p> Send a thought to the blockchain!</p>
@@ -207,6 +205,7 @@ class Public extends Component {
              />
 
           }
+
         </div>
 
 {/*

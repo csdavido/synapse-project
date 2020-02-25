@@ -5,6 +5,7 @@ contract profile {
 
     uint public thoughtCount = 0;
     uint userCount = 0;
+    uint public numHandles = 0;
 
     struct Thought {
       uint id;
@@ -22,12 +23,13 @@ contract profile {
 
     //Thought[] public thoughts;
 
+
     mapping(uint => Thought) public thoughts;
     mapping(uint => User) public users;
     mapping (address => string) handles;
     mapping (address => uint) senderThoughts;
     mapping (address => uint) senderID;
-    mapping (string => uint) handleList;
+    mapping (string => uint) public handleList;
 
 
     constructor () public {
@@ -57,6 +59,8 @@ contract profile {
       thoughts[thoughtCount] = Thought(thoughtCount, ft, msg.sender, _handle);
       senderThoughts[msg.sender]++;
       thoughtCount ++;
+      handleList[_handle] = 1;
+      numHandles ++;
     }
 
 
@@ -64,6 +68,8 @@ contract profile {
       string memory ft = "Hello, World!";
       thoughts[thoughtCount] = Thought(thoughtCount, ft, msg.sender, "genesis");
       thoughtCount ++;
+      handleList["synapse"] = 1;
+      numHandles ++;
     }
 
     function readThoughts() public {
@@ -78,28 +84,41 @@ contract profile {
       userCount++;
     }
 
+
+
+    event checkHandle(string _handle, address sndr, uint avail);
+
+
     function updateUser(string memory _handle) public returns (uint) {
 
       uint sndr = senderID[msg.sender];
 
       if (senderThoughts[msg.sender] == 0) {
         firstThought(_handle);
-        return 1;
+        emit checkHandle (_handle, msg.sender, 1);
+        //return 1;
       }
 
       else {
 
         string memory handleStorage = handles[msg.sender];
 
-        if (handleList[_handle] == 0) {
+        if (handleList[_handle] != 1) {
+
+          if (handleList[_handle] != 0) {
+            numHandles++;
+          }
+
           users[sndr] = User(sndr, _handle, msg.sender);
           handles[msg.sender] = _handle;
           handleList[handleStorage] = 0;
           handleList[_handle] = 1;
-          return 2;
+          emit checkHandle (_handle, msg.sender, 2);
+          //return 2;
         }
         else {
-          return 3;
+          emit checkHandle (_handle, msg.sender, 3);
+          //return 3;
         }
       }
     }
