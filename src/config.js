@@ -1,6 +1,13 @@
-//export const SYNAPSE_ADDRESS = '0xf8b8fE505F61d6F457822169027a6B71B5a4246D'
-//export const SYNAPSE_ADDRESS = '0x458b2a90c2d87cfc8bfb8722873345bc081dc199'
-export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
+import Profile from './contractsABI/profile.json'
+
+import Synapse from './contractsABI/synapse.json'
+
+
+//Ganache
+export const SYNAPSE_ADDRESS = '0x3D022Ca86c437C3C3CBd34A7d762dEcdba2aaedd'
+
+//Ropsten
+//export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
 
 
 
@@ -174,9 +181,260 @@ export const SYNAPSE_ABI = [
 
 
 
-//export const PROFILE_ADDRESS = '0x36aCcAb7A77f4F6A0c7AaD1c4Ca380c95a73Ec95'
-//export const PROFILE_ADDRESS = '0xb9b8a34c36810ba23e54df66646dfb26e93af8d7'
-export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
+//Ganache
+export const PROFILE_ADDRESS = '0x360626a8c52BFCDF16e407A11bA8DC5328760E13'
+
+//Ropsten
+//export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
+
+//export const PROFILE_ABI = Profile.abi
+
+export const PROFILE_ABI = [
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "_handle",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "sndr",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "avail",
+				"type": "uint256"
+			}
+		],
+		"name": "checkHandle",
+		"type": "event"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_content",
+				"type": "string"
+			}
+		],
+		"name": "createThought",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_handle",
+				"type": "string"
+			}
+		],
+		"name": "firstThought",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "genesisThought",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "getUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"name": "handleList",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_handle",
+				"type": "string"
+			}
+		],
+		"name": "newUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "numHandles",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "readThoughts",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "thoughtCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "thoughts",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "thought",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "handle",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_handle",
+				"type": "string"
+			}
+		],
+		"name": "updateUser",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "users",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "handle",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "user",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+/*
+
 
 export const PROFILE_ABI = [
 	{
@@ -355,3 +613,5 @@ export const PROFILE_ABI = [
 		"type": "function"
 	}
 ]
+
+*/

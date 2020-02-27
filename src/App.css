@@ -3,14 +3,51 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  /*height: 40vmin*/;
   pointer-events: none;
 }
 
 .Text-logo {
-  height: 40vmin;
+  /*height: 40vmin;*/
   pointer-events: none;
 }
+
+
+/* logo image */
+.synapse-logo {
+  position: absolute;
+  width: auto;
+  height: 50px !important;
+  left: 36px;
+  top: 36px;
+}
+
+
+/* logo text */
+.synapse-text {
+  position: relative;
+  width: auto;
+  height: 50px !important;
+}
+
+/* logo text */
+.synapse-div {
+  position: absolute;
+  width: auto;
+  height: 50px !important;
+  left: 100px;
+  top: 36px;
+}
+
+.logoBalance {
+  font-size: 10px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -55,7 +92,10 @@ th, td {
 hr {
   border: 1px solid white !important;
   margin-top: 100px;
+  width: 80%;
 }
+
+
 
 .App #t01 {
   border: 2px solid white;
@@ -124,7 +164,7 @@ hr {
 }
 
 .thoughtBox {
-  width: auto;
+  width: 60% !important;
   height: 150px;
   padding: 12px 20px;
   box-sizing: border-box;
@@ -133,6 +173,16 @@ hr {
   background-color: #f8f8f8;
   resize: none;
 }
+
+.formDiv {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.thoughtForm {
+  width: 100%;
+}
+
 
 @media screen and (max-width:430px){
   body {
