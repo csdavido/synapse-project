@@ -1,13 +1,13 @@
 import Profile from './contractsABI/profile.json'
-
 import Synapse from './contractsABI/synapse.json'
+import Bio from './contractsABI/bio.json'
 
 
 //Ganache
-export const SYNAPSE_ADDRESS = '0x3D022Ca86c437C3C3CBd34A7d762dEcdba2aaedd'
+//export const SYNAPSE_ADDRESS = '0x3D022Ca86c437C3C3CBd34A7d762dEcdba2aaedd'
 
 //Ropsten
-//export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
+export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
 
 
 
@@ -615,3 +615,67 @@ export const PROFILE_ABI = [
 ]
 
 */
+
+
+// Ropsten
+export const BIO_ADDRESS = '0xda44ee5E9d7FCAd27013402FEa2db0Ee1b78bcc7'
+
+export const BIO_ABI = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_bio",
+				"type": "string"
+			}
+		],
+		"name": "updateBio",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "bios",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "getBio",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
