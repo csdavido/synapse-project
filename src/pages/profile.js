@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import '../App.css'
 import Web3 from 'web3'
-import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from '../config'
-import { PROFILE_ABI, PROFILE_ADDRESS } from '../config'
+//import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from '../config'
+//import { PROFILE_ABI, PROFILE_ADDRESS } from '../config'
 import { BIO_ABI, BIO_ADDRESS } from '../config'
+import ReactTooltip from 'react-tooltip'
 
-var bioText = 'Loading...'
+
 
 function isInstalled() {
    if (typeof Web3 !== 'undefined'){
@@ -35,11 +37,13 @@ class Profile extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
+    await this.getBioText()
     this.forceUpdate()
   }
 
   componentDidMount(){
     document.title = "Synapse App"
+    
     
   }
   
@@ -72,47 +76,36 @@ class Profile extends Component {
 
     //await ethereum.enable();
 
-    const synapse = new web3.eth.Contract(SYNAPSE_ABI, SYNAPSE_ADDRESS)
-    const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
-    const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)    
-        
+    //const synapse = new web3.eth.Contract(SYNAPSE_ABI, SYNAPSE_ADDRESS)
+    //const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+    const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)
     this.setState({ bio })
     
-    
     const accounts = await web3.eth.getAccounts()
-    const balanceWei = await web3.eth.getBalance(accounts[0])
+    //const balanceWei = await web3.eth.getBalance(accounts[0])
     
     
-    var balance = balanceWei/1000000000000000000
+    //var balance = balanceWei/1000000000000000000
     
     this.setState({ account: accounts[0]})
     
-    bio.methods.getBio(accounts[0]).call({ from: accounts[0]}).then(function(result){
-        bioText = result  
-        console.log(bioText)  
-        
-    });
-    this.setState({ currentBio: bioText })
+
   }
     
   async refresh() {
     this.forceUpdate()
   }
+  
+  async getBioText() {
+      const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
+      const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)
+      const accounts = await web3.eth.getAccounts() 
+      this.setState({ account: accounts[0]})
+      
+      bio.methods.getBio(accounts[0]).call({ from: accounts[0]}).then(val => this.setState({ currentBio: val }));
 
-  async componentDidMount() {
-    const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
-    const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)    
-    this.setState({ bio })
-    const accounts = await web3.eth.getAccounts()
-    this.setState({ account: accounts[0]})
-    
-    bio.methods.getBio(accounts[0]).call({ from: accounts[0]}).then(function(result){
-        bioText = result  
-        console.log(bioText)
-    });
-    
-    this.forceUpdate()
   }
+
 
   constructor(props) {
     super(props);
@@ -123,7 +116,7 @@ class Profile extends Component {
       thoughts: [],
       handle: 0,
       loading: true,
-      currentBio: bioText     
+      currentBio: "Loading.."     
     }
     this.updateBioText = this.updateBioText.bind(this)
     this.getBioText = this.getBioText.bind(this)
@@ -139,31 +132,32 @@ class Profile extends Component {
     })
   }
   
-  getBioText() {
-      this.setState({ loading: true })
-      return this.state.bio.methods.getBio(this.state.account).call({ from: this.state.account })
-      .once('receipt', (receipt) => {
-      this.setState({ loading: false })
-    });
-      
-  }
-      
   
   render() {
     return (
     <div className="App">
         <header className="App-header">
           <main role="main" className="">
+        
+        Address: <p data-tip= { this.state.currentBio } > { this.state.account } </p>
+        <form>
+          <label>
+            Current Bio: <br />
+            <ReactTooltip />
+            <input type="text" name="name" size="50" text-align="center" readonly value= { this.state.currentBio } />
+          </label>
+          
+        </form>
 
-        <div>
-        Current bio:
-        <div dangerouslySetInnerHTML= {{ __html: this.state.currentBio }} />
-        </div>
+        <hr />
+        
+        
+        
         <form onSubmit={(event) => {
           event.preventDefault()
           this.updateBioText(this.user.value)
         }}>
-          <input ref={(input) => this.user = input} type="text" className="" placeholder="Update bio" required />
+          <input ref={(input) => this.user = input} type="text" className="" placeholder="Update bio" maxlength="200" required />
           &nbsp;
           <input type="submit" hidden={false} />
         </form>
