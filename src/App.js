@@ -5,7 +5,7 @@ import Settings from './pages/settings.js';
 import Logo from './components/logo.js'
 
 import Public from './pages/pub.js';
-//import Profile from './pages/profile.js';
+import Profile from './pages/profile.js';
 //import Public from './pages/public.js';
 //import About from './pages/about.js';
 //import Contact from './pages/contact.js';
@@ -23,10 +23,11 @@ class App extends Component {
              <Route path="/settings" component={Settings} exact/>
              {/*
              //<Route path="/home" component={Home}/>
-             //<Route path="/profile" component={Profile}/>
+             //
              //<Route path="/about" component={About} exact/>
             //<Route component={Error}/>
             */}
+            <Route path="/profile" component={Profile}/>
            </Switch>
         </div>
       </BrowserRouter>
