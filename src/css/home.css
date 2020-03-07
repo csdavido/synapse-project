@@ -1,0 +1,112 @@
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+div.left {
+  margin-top: 20px;
+  margin-left: 400px;
+  color: white;
+	float: left;
+  font-size: 12;
+	padding: 0px;
+	width: 520px;
+	background-color: #777;
+  display: inline-block;
+
+}
+
+div.right {
+	float: left;
+	padding: 10px;
+	width: %;
+}
+
+.thought-wrap {
+  max-width:490px;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 50px;
+  border-radius:3px;
+  padding: 30px;
+  border-bottom: 1px solid #e6ecf0;
+  border-top: 1px solid #e6ecf0;
+}
+
+.thought-head {
+  display: flex;
+  align-items:flex-start;
+  font-size:14px;
+}
+.thought-info {
+  font-weight:bold;
+}
+.thought-info span {
+  color:#657786;
+  font-weight:normal;
+  text-align: left;
+}
+.thought-info p {
+  color: black;
+  font-weight:normal;
+  margin-top: 5px;
+  text-align: left;
+
+}
+
+.thought-counts {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 10px;
+}
+
+.thought-counts div {
+  display: flex;
+  margin-right: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  color: black;
+}
+
+.thought-counts div svg {
+  color:#657786;
+  margin-right: 10px;
+}
+
+.thoughtBox {
+  width: auto;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+@media screen and (max-width:430px){
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .thought-head {
+    flex-direction:column;
+  }
+  .thought-info p {
+    margin-bottom: 30px;
+  }
+  .thought-counts {
+  display: flex;
+  margin-left: 0;
+}
+.thought-counts div {
+  margin-right: 10px;
+}
+}
