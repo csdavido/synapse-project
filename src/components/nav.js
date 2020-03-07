@@ -11,7 +11,8 @@ class Navigation extends React.Component {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu right>
-        <a id="home" className="menu-item" href="/">Home</a>
+        <a id="home" className="menu-item" href="/">Public</a>
+        <a id="home" className="menu-item" href="/home">Home</a>
         <a id="profile" className="menu-item" href="/profile">Profile</a>
         <a id="about" className="menu-item" href="/about">About</a>
         <a id="contact" className="menu-item" href="/contact">Contact</a>
