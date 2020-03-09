@@ -15,7 +15,7 @@ class Navigation extends React.Component {
         <a id="home" className="menu-item" href="/home">Home</a>
         <a id="profile" className="menu-item" href="/profile">Profile</a>
         <a id="about" className="menu-item" href="/about">About</a>
-        <a id="contact" className="menu-item" href="/contact">Contact</a>
+        <a id="team" className="menu-item" href="/team">Team</a>
         <a id="settings" className="menu-item" href="/settings">Settings</a>
         {/*<a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>*/}
       </Menu>
