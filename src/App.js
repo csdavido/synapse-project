@@ -8,7 +8,7 @@ import Public from './pages/pub.js';
 import Profile from './pages/profile.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
-//import Contact from './pages/contact.js';
+import Team from './pages/team.js';
 //import Error from './pages/Error';
 //import Navigation from './components/Navigation';
 
@@ -23,6 +23,7 @@ class App extends Component {
              <Route path="/settings" component={Settings} exact/>
              <Route path="/home" component={Home} exact/>
              <Route path="/about" component={About} exact/>
+             <Route path="/team" component={Team} exact/>
              {/*
             //<Route component={Error}/>
             */}
