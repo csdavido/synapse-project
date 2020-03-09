@@ -1,0 +1,82 @@
+.About {
+  text-align: center;
+}
+
+
+/* logo image */
+.synapse-logo {
+  position: absolute;
+  width: auto;
+  height: 50px !important;
+  left: 36px;
+  top: 36px;
+}
+
+
+/* logo text */
+.synapse-text {
+  position: relative;
+  width: auto;
+  height: 50px !important;
+}
+
+/* logo text */
+.synapse-div {
+  position: absolute;
+  width: auto;
+  height: 50px !important;
+  left: 100px;
+  top: 36px;
+}
+
+.logoBalance {
+  font-size: 10px;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: none;
+  }
+
+  .Text-logo {
+  }
+}
+
+.About-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.About-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Description {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
