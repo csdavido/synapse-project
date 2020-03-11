@@ -85,8 +85,14 @@ contract profile {
       userCount++;
     }
 
-
-
+    function getHandle(address _addr) public view returns (string memory) {
+        return handles[_addr];
+    }
+    
+    function getOwnHandle() public view returns (string memory) {
+        return handles[msg.sender];
+    }
+    
     event checkHandle(string _handle, address sndr, uint avail);
 
 
