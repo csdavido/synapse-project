@@ -135,13 +135,22 @@ class Settings extends Component {
       const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
       const accounts = await web3.eth.getAccounts()       
       
-      profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => this.setState({ currentHandle: val }));
+      let curHandle = "";
       
-      if (this.currentHandle == "Anonymous" || this.currentHandle == "")
-      {
-          this.setState({ currentHandle: "Anonymous" })
-      }
+      profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => {
+          if (val === undefined || val === null || val === "")
+          {
+            this.setState({ currentHandle: "Anonymous" });
+          }
+          else 
+          {
+              this.setState({ currentHandle: val });
+          }          
+      }, reason => {});
   }
+  
+      
+      
       
       
   

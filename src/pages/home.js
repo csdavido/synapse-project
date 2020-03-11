@@ -40,7 +40,7 @@ class Home extends Component {
     await this.loadWeb3()
     await this.loadBlockchainData()
     await this.getBioText()
-    await this.getHandle()
+    await this.getOwnHandle()
     this.forceUpdate()
   }
 
@@ -107,7 +107,7 @@ class Home extends Component {
 
     this.createThought = this.createThought.bind(this)
     this.getBioText = this.getBioText.bind(this)
-    this.getHandle = this.getHandle.bind(this)
+    this.getOwnHandle = this.getOwnHandle.bind(this)
   }
 
   async refresh() {
@@ -135,16 +135,25 @@ class Home extends Component {
 
   }
 
-  async getHandle() {
+  async getOwnHandle() {
       const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
-      const handle = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
-      const accounts = await web3.eth.getAccounts()
-      this.setState({ account: accounts[0]})
-
-      handle.methods.getOwnHandle().call({ from: accounts[0]}).then(val => this.setState({ currentHandle: val }))
-
-
+      const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+      const accounts = await web3.eth.getAccounts()       
+      
+      let curHandle = "";
+      
+      profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => {
+          if (val === undefined || val === null || val === "")
+          {
+            this.setState({ currentHandle: "Anonymous" });
+          }
+          else 
+          {
+              this.setState({ currentHandle: val });
+          }          
+      }, reason => {});
   }
+  
 
   render() {
     return (
