@@ -58,6 +58,7 @@ contract profile {
       string memory ft = "I am alive!";
       thoughts[thoughtCount] = Thought(thoughtCount, ft, msg.sender, _handle);
       senderThoughts[msg.sender]++;
+      handles[msg.sender] = _handle;
       thoughtCount ++;
       handleList[_handle] = 1;
       numHandles ++;
