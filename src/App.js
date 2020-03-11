@@ -5,7 +5,6 @@ import Settings from './pages/settings.js';
 import Logo from './components/logo.js'
 
 import Public from './pages/pub.js';
-import Profile from './pages/profile.js';
 import Home from './pages/home.js';
 import About from './pages/about.js';
 import Team from './pages/team.js';
@@ -27,7 +26,7 @@ class App extends Component {
              {/*
             //<Route component={Error}/>
             */}
-            <Route path="/profile" component={Profile}/>
+            
            </Switch>
         </div>
       </BrowserRouter>
