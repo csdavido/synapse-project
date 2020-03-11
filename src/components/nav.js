@@ -12,8 +12,7 @@ class Navigation extends React.Component {
     return (
       <Menu right>
         <a id="home" className="menu-item" href="/">Public</a>
-        <a id="home" className="menu-item" href="/home">Home</a>
-        <a id="profile" className="menu-item" href="/profile">Profile</a>
+        <a id="home" className="menu-item" href="/home">Home</a>        
         <a id="about" className="menu-item" href="/about">About</a>
         <a id="team" className="menu-item" href="/team">Team</a>
         <a id="settings" className="menu-item" href="/settings">Settings</a>
