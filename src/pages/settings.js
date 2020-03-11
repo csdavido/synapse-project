@@ -4,8 +4,8 @@ import '../App.css'
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from '../config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from '../config'
 import ChangeHandle from '../changeHandle.js'
-
-
+import { BIO_ABI, BIO_ADDRESS } from '../config'
+import ReactTooltip from 'react-tooltip'
 
 
 function isInstalled() {
@@ -37,6 +37,8 @@ class Settings extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
+    await this.getBioText()
+    await this.getOwnHandle()
     this.forceUpdate()
   }
 
@@ -78,9 +80,11 @@ class Settings extends Component {
 
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
-
+    const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)
+    
     this.setState({ profile })
     this.setState({ thoughtCount })
+    this.setState({ bio })
 
     var balance = balanceWei/1000000000000000000
 
@@ -114,6 +118,30 @@ class Settings extends Component {
 
   }
 
+  async getBioText() {
+      const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
+      const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)
+      const accounts = await web3.eth.getAccounts() 
+      this.setState({ account: accounts[0]})
+      
+      bio.methods.getBio(accounts[0]).call({ from: accounts[0]}).then(val => this.setState({ currentBio: val }));
+  }
+  
+  async getOwnHandle() {
+      const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
+      const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+      const accounts = await web3.eth.getAccounts()       
+      
+      profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => this.setState({ currentHandle: val }));
+      
+      if (this.currentHandle == "Anonymous" || this.currentHandle == "")
+      {
+          this.setState({ currentHandle: "Anonymous" })
+      }
+  }
+      
+      
+  
   constructor(props) {
     super(props)
     this.state = {
@@ -123,14 +151,28 @@ class Settings extends Component {
       thoughts: [],
       handle: 0,
       loading: true,
-      handleCheck: false
-
+      handleCheck: false,
+      currentBio: "Loading.."  ,
+      currentHandle: "Loading.."
     }
+    
     this.createThought = this.createThought.bind(this)
     this.changeHandle = this.changeHandle.bind(this)
+    this.updateBioText = this.updateBioText.bind(this)
+    this.getBioText = this.getBioText.bind(this)
+    this.getOwnHandle = this.getOwnHandle.bind(this)
   }
 
+  updateBioText(string) {
 
+    this.setState({ loading: true })
+    this.state.bio.methods.updateBio(string).send({ from: this.state.account })
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+    })
+  }
+
+  
   handleChangeRender() {
     if (this.state.handle == 1) {
       return <div id="loader" className=""><p className="">New user!</p></div>
@@ -206,7 +248,25 @@ class Settings extends Component {
       <div className="App">
         <header className="App-header">
           <main role="main" className="">
-
+            Address: <p data-tip= { this.state.currentBio } > { this.state.account } </p>
+            <ReactTooltip />
+            <form>
+              <label>
+                Current Bio: { this.state.currentBio } <br />
+                Current Handle: { this.state.currentHandle } <br />
+                
+              </label>          
+            </form>
+            <hr />
+            <form onSubmit={(event) => {
+          event.preventDefault()
+          this.updateBioText(this.user.value)
+        }}>
+          <input ref={(input) => this.user = input} type="text" className="" placeholder="Update bio?" maxlength="200" required />
+          &nbsp;
+          <input type="submit" hidden={false} />
+        </form>
+        <hr />
               <ChangeHandle
                 changeHandle={this.changeHandle}
                />
@@ -222,7 +282,7 @@ class Settings extends Component {
             </main>
         </header>
       </div>
-
+      
     );
   }
 }
