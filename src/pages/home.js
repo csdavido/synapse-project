@@ -45,10 +45,10 @@ class Home extends Component {
 
   componentDidMount(){
     document.title = "My Synapse Feed"
-    
-    
+
+
   }
-  
+
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
@@ -61,12 +61,12 @@ class Home extends Component {
       window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
     }
   }
-  
+
   async componentWillUnmount() {
     clearInterval(this.interval);
   }
-  
-  
+
+
   async loadBlockchainData() {
 
     const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
@@ -80,12 +80,12 @@ class Home extends Component {
 
     this.setState({ profile })
     this.setState({ bio })
-    
+
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
-    
+
     var balance = balanceWei/1000000000000000000
-  
+
     this.setState({ account: accounts[0], balance: balance })
     this.setState({ loading: false })
 
@@ -101,14 +101,14 @@ class Home extends Component {
       thoughts: [],
       handle: 0,
       loading: true,
-      currentBio: "Loading.."     
+      currentBio: "Loading..."
     }
-    
+
     this.createThought = this.createThought.bind(this)
     this.getBioText = this.getBioText.bind(this)
-    
+
   }
-    
+
   async refresh() {
     this.forceUpdate()
   }
@@ -123,17 +123,17 @@ class Home extends Component {
         this.setState({ loading: false })
       })
   }
-  
+
   async getBioText() {
       const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
       const bio = new web3.eth.Contract(BIO_ABI, BIO_ADDRESS)
-      const accounts = await web3.eth.getAccounts() 
+      const accounts = await web3.eth.getAccounts()
       this.setState({ account: accounts[0]})
-      
+
       bio.methods.getBio(accounts[0]).call({ from: accounts[0]}).then(val => this.setState({ currentBio: val }));
 
-  }  
-  
+  }
+
   async getHandle() {
       const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
       const handle = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
@@ -141,13 +141,13 @@ class Home extends Component {
       this.setState({ account: accounts[0]})
 
       handle.methods.getHandle(accounts[0]).call({ from: accounts[0]}).then(val => this.setState({ }))
-      
+
 
   }
 
   render() {
     return (
-      <div className="App"> 
+      <div className="App">
 
           <section>
             <div class="left">
@@ -169,7 +169,7 @@ class Home extends Component {
               <span></span>
 
               <Feed/>
-              
+
             </div>
           </section>
       </div>
