@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import Web3 from 'web3'
 import '../App.css'
+import logo from '../public/home/logo.png';
+import text from '../public/home/text.png';
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from '../config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from '../config'
 import ChangeHandle from '../changeHandle.js'
 import { BIO_ABI, BIO_ADDRESS } from '../config'
 import ReactTooltip from 'react-tooltip'
+import Logo from '../components/logo.js'
 
 
 function isInstalled() {
@@ -247,6 +250,7 @@ class Settings extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <Logo bal={this.state.balance}/>
           <main role="main" className="">
             Address: <p data-tip= { this.state.currentBio } > { this.state.account } </p>
             <ReactTooltip />
