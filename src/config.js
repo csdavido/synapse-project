@@ -185,7 +185,7 @@ export const SYNAPSE_ABI = [
 //export const PROFILE_ADDRESS = '0x360626a8c52BFCDF16e407A11bA8DC5328760E13'
 
 //Ropsten
-export const PROFILE_ADDRESS = '0xdaa6677e82e25561427abe91835dd5046d915676'
+export const PROFILE_ADDRESS = '0x095017d91Ed3AA834C5C9A57b2E3B21E0Aa07cF3'
 
 //export const PROFILE_ABI = Profile.abi
 
@@ -618,7 +618,7 @@ export const PROFILE_ABI = [
 
 
 // Ropsten
-export const BIO_ADDRESS = '0xda44ee5E9d7FCAd27013402FEa2db0Ee1b78bcc7'
+export const BIO_ADDRESS = '0xA2cBA6E94218D585EC3753D24d75a72b10218ed9'
 
 export const BIO_ABI = [
 	{
