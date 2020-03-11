@@ -40,6 +40,7 @@ class Home extends Component {
     await this.loadWeb3()
     await this.loadBlockchainData()
     await this.getBioText()
+    await this.getHandle()
     this.forceUpdate()
   }
 
@@ -106,7 +107,7 @@ class Home extends Component {
 
     this.createThought = this.createThought.bind(this)
     this.getBioText = this.getBioText.bind(this)
-
+    this.getHandle = this.getHandle.bind(this)
   }
 
   async refresh() {
@@ -140,7 +141,7 @@ class Home extends Component {
       const accounts = await web3.eth.getAccounts()
       this.setState({ account: accounts[0]})
 
-      handle.methods.getHandle(accounts[0]).call({ from: accounts[0]}).then(val => this.setState({ }))
+      handle.methods.getOwnHandle().call({ from: accounts[0]}).then(val => this.setState({ currentHandle: val }))
 
 
   }
@@ -152,9 +153,9 @@ class Home extends Component {
           <section>
             <div class="left">
               <h5> Account: {this.state.account} </h5>
-              <h5> @ { this.state.handle} </h5>
+              <h5> @ { this.state.currentHandle} </h5>
               <h5>My Balance: <p> {this.state.balance}</p></h5>
-              <h5>My Bio: {this.state.currentBio}</h5>
+              <h5>My Bio: <p> {this.state.currentBio} </p> </h5>
             </div>
 
             <div class="right">
