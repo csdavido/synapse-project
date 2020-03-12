@@ -162,7 +162,7 @@ class Home extends Component {
           <section>
             <div class="left">
               <h5> Account: {this.state.account} </h5>
-              <h5> @ { this.state.currentHandle} </h5>
+              <h5> @{this.state.currentHandle} </h5>
               <h5>My Balance: <p> {this.state.balance}</p></h5>
               <h5>My Bio: <p> {this.state.currentBio} </p> </h5>
             </div>
@@ -178,7 +178,7 @@ class Home extends Component {
 
               <span></span>
 
-              <Feed/>
+              <Feed thoughts={this.state.thoughts} />
 
             </div>
           </section>
