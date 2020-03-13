@@ -10,6 +10,8 @@ import { BIO_ABI, BIO_ADDRESS } from '../config'
 import { USER_ABI, USER_ADDRESS } from '../config'
 import Thought from '../createThought.js'
 import Feed from '../feed.js'
+import FollowerFeed from '../follow.js'
+
 
 
 function isInstalled() {
@@ -40,8 +42,9 @@ class Follow extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
-    {/*await this.addFollow("0x9F943eD85fb1B63b2a68aF79290e5023D32F5E96")*/}
+    {/* await this.addFollow("0x9F943eD85fb1B63b2a68aF79290e5023D32F5E96") */}
     await this.getFollowing()
+    await this.populateThoughts()
     this.forceUpdate()
   }
 
@@ -95,6 +98,24 @@ class Follow extends Component {
 
     var testFollow = "0x9F943eD85fb1B63b2a68aF79290e5023D32F5E96"
 
+    var thoughtCount = await profile.methods.thoughtCount().call()
+
+    this.setState({ loading: true })
+
+    const add = accounts[0]
+
+    for (var i = thoughtCount - 1; i >= 0; i--) {
+
+      const singleThought = await profile.methods.thoughts(i).call()
+
+      if (singleThought.sender == add) {
+        this.setState({
+          thoughts: [...this.state.thoughts, singleThought]
+        })
+      }
+
+    }
+
 
   }
 
@@ -108,9 +129,93 @@ class Follow extends Component {
 
   async getFollowing() {
 
-    var singleFollow = await this.state.follow.methods.getFollowers.call()
+    var i = 0
 
-    console.log(singleFollow[0])
+    var fcCount = await this.state.follow.methods.getFollowCount().call({ from: this.state.account })
+
+    console.log("COUNT: " + fcCount)
+
+    var singleFollow = "follow"
+
+    var sfCheck = true
+    var fc = 0
+
+    for (fc = fcCount; fc > 0; fc--) {
+
+    singleFollow = await this.state.follow.methods.following(this.state.account, i).call()
+
+
+    console.log(singleFollow)
+
+    if (singleFollow) {
+      this.setState({
+        following: [...this.state.following, singleFollow]
+      })
+    }
+
+    i++
+
+    }
+
+
+  }
+
+  async populateThoughts () {
+
+    this.setState({ loading: true })
+
+    var followLength = this.state.following.length
+
+    var thoughtLength = this.state.thoughts.length
+
+  var n
+  var checker = true
+  var holder = 0
+  var looper = true
+
+  while (checker)
+    for (n = thoughtLength-1; n > -1; n--) {
+
+      console.log("Tl: " + thoughtLength)
+
+      looper = true
+      var sndr = await this.state.thoughts[n].sender
+
+      console.log("Loop " + n + ": " + this.state.thoughts[n].thought)
+
+      for (var x = followLength - 1; x > 0; x--) {
+
+        if (this.state.following[x] == sndr) {
+
+          var newAdd = await this.state.thoughts[n]
+
+          this.setState({ fThoughts: [...this.state.fThoughts, newAdd] }, () => {
+            console.log("New State " + this.state.fThoughts[0].sender);
+          });
+          looper = false
+          break
+          holder++
+
+        }
+        if (looper == false) {
+          break
+        }
+
+      }
+
+      if (holder == 10) {
+        checker = false
+      }
+
+      console.log("done")
+    checker = false
+
+      this.setState(
+      { loading: false})
+
+
+    }
+
 
   }
 
@@ -120,9 +225,10 @@ class Follow extends Component {
     this.state = {
       account: '',
       balance: '',
-      myString: '',
+      myString: 'HI',
       thoughts: [],
       following: [],
+      fThoughts: [],
       handle: 0,
       loading: true,
       currentBio: "Loading..."
@@ -130,6 +236,7 @@ class Follow extends Component {
 
     this.addFollow = this.addFollow.bind(this)
     this.getFollowing = this.getFollowing.bind(this)
+    this.populateThoughts = this.populateThoughts.bind(this)
 
   }
 
@@ -142,7 +249,36 @@ class Follow extends Component {
   render() {
     return (
       <div>
-      </div>
+{/*
+          <form onSubmit={(event) => {
+        event.preventDefault()
+        this.addFollow(this.user.value)
+          }}>
+        <input ref={(input) => this.user = input} type="text" className="" placeholder="Follow Address" maxlength="200" required />
+        &nbsp;
+        <input type="submit" hidden={false} />
+        </form>
+*/}
+      <br />
+
+      <form onSubmit={(event) => {
+    event.preventDefault()
+    this.populateThoughts()
+      }}>
+    &nbsp;
+    <input type="submit" hidden={false} />
+    </form>
+
+
+    { this.state.loading
+      ? <div id="loader" className=""><p className="">Getting feed...</p></div>
+      : <FollowerFeed fThoughts = {this.state.fThoughts} />
+
+    }
+
+
+    </div>
+
     );
   }
 }

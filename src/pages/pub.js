@@ -5,6 +5,7 @@ import logo from '../public/home/logo.png';
 import text from '../public/home/text.png';
 import { SYNAPSE_ABI, SYNAPSE_ADDRESS } from '../config'
 import { PROFILE_ABI, PROFILE_ADDRESS } from '../config'
+import { FOLLOW_ABI, FOLLOW_ADDRESS } from '../config'
 import Thought from '../createThought'
 import Thoughts from '../thoughts'
 import ChangeHandle from '../changeHandle'
@@ -80,6 +81,9 @@ class Public extends Component {
 
     const synapse = new web3.eth.Contract(SYNAPSE_ABI, SYNAPSE_ADDRESS)
     const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+    const follow = new web3.eth.Contract(FOLLOW_ABI, FOLLOW_ADDRESS)
+
+    this.setState({ follow })
 
     const accounts = await web3.eth.getAccounts()
     const balanceWei = await web3.eth.getBalance(accounts[0])
@@ -133,6 +137,7 @@ class Public extends Component {
     this.createThought = this.createThought.bind(this)
     this.changeHandle = this.changeHandle.bind(this)
     this.getOwnHandle = this.getOwnHandle.bind(this)
+    this.addFollow = this.addFollow.bind(this)
   }
 
 
@@ -182,6 +187,12 @@ class Public extends Component {
 
   }
 
+
+  async addFollow(followee) {
+
+    this.state.follow.methods.addFollower(followee).send({ from: this.state.account })
+
+  }
 
   /*changeHandle(string) {
 

@@ -4,7 +4,7 @@ import Bio from './contractsABI/bio.json'
 
 
 
-export const FOLLOW_ADDRESS = '0x8d4dCE8A1dEF468A07e2Ce4D132317287312f01d'
+export const FOLLOW_ADDRESS = '0x4b9Abdf36222f49829242468028b9a7e68e79732'
 
 export const FOLLOW_ABI = [
 	{
@@ -20,6 +20,27 @@ export const FOLLOW_ABI = [
 		"outputs": [],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "followCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{
@@ -51,6 +72,21 @@ export const FOLLOW_ABI = [
 	{
 		"constant": true,
 		"inputs": [],
+		"name": "getFollowCount",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
 		"name": "getFollowers",
 		"outputs": [
 			{
@@ -64,7 +100,6 @@ export const FOLLOW_ABI = [
 		"type": "function"
 	}
 ]
-
 
 //Ganache
 //export const SYNAPSE_ADDRESS = '0x3D022Ca86c437C3C3CBd34A7d762dEcdba2aaedd'

@@ -9,7 +9,7 @@ import { BIO_ABI, BIO_ADDRESS } from '../config'
 import { USER_ABI, USER_ADDRESS } from '../config'
 import Thought from '../createThought.js'
 import Feed from '../feed.js'
-import Follow from '../components/follow.js'
+import Follow from '../components/followFeed.js'
 
 
 function isInstalled() {
