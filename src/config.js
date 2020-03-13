@@ -3,13 +3,74 @@ import Synapse from './contractsABI/synapse.json'
 import Bio from './contractsABI/bio.json'
 
 
+
+export const FOLLOW_ADDRESS = '0x8d4dCE8A1dEF468A07e2Ce4D132317287312f01d'
+
+export const FOLLOW_ABI = [
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newFollow",
+				"type": "address"
+			}
+		],
+		"name": "addFollower",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "following",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getFollowers",
+		"outputs": [
+			{
+				"internalType": "address[]",
+				"name": "",
+				"type": "address[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+
 //Ganache
 //export const SYNAPSE_ADDRESS = '0x3D022Ca86c437C3C3CBd34A7d762dEcdba2aaedd'
 
 //Ropsten
 export const SYNAPSE_ADDRESS = '0x47cf9db348736fc8a7317c0a50de5ea527b6f307'
-
-
 
 export const SYNAPSE_ABI = [
 	{
@@ -186,7 +247,7 @@ export const SYNAPSE_ABI = [
 //export const PROFILE_ADDRESS = '0x30b867865699132F1B81E3bc0C399EE120a4E389'
 
 //Ropsten
-export const PROFILE_ADDRESS = '0x2B6994c2121765f70ef2c7E0aA6622827646AF81'
+export const PROFILE_ADDRESS = '0x4B556b3299A87bCab50173fcb743Eeeac965f0B8'
 
 //export const PROFILE_ABI = Profile.abi
 
@@ -313,6 +374,32 @@ export const PROFILE_ABI = [
 		],
 		"payable": false,
 		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "a",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "b",
+				"type": "string"
+			}
+		],
+		"name": "compareStrings",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
 		"type": "function"
 	},
 	{

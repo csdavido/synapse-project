@@ -45,8 +45,18 @@
   top: 50px;
   left: 0px;
 }
+.acctBalance {
+  font-size: 10px;
+}
+.handBalance {
+  font-size: 10px;
+}
 
-
+.infoFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

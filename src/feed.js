@@ -62,7 +62,7 @@ class Thoughts extends Component {
     const add = accounts[0]
 
     for (var i = thoughtCount - 1; i >= 0; i--) {
-      
+
       const singleThought = await profile.methods.thoughts(i).call()
 
       if (singleThought.sender == add) {

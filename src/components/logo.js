@@ -8,6 +8,7 @@ class Logo extends React.Component {
     event.preventDefault();
   }
 
+
   render () {
     return (
       <div>

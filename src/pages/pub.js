@@ -41,6 +41,7 @@ class Public extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
+    await this.getOwnHandle()
     this.forceUpdate()
   }
 
@@ -131,6 +132,7 @@ class Public extends Component {
     }
     this.createThought = this.createThought.bind(this)
     this.changeHandle = this.changeHandle.bind(this)
+    this.getOwnHandle = this.getOwnHandle.bind(this)
   }
 
 
@@ -146,6 +148,25 @@ class Public extends Component {
     else if (this.state.handle == 3) {
       return <div id="loader" className=""><p className="">Taken!</p></div>
     }
+  }
+
+  async getOwnHandle() {
+      const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
+      const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
+      const accounts = await web3.eth.getAccounts()
+
+      let curHandle = "";
+
+      profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => {
+          if (val === undefined || val === null || val === "")
+          {
+            this.setState({ currentHandle: "Anonymous" });
+          }
+          else
+          {
+              this.setState({ currentHandle: val });
+          }
+      }, reason => {});
   }
 
   createThought(string) {
@@ -192,7 +213,9 @@ class Public extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Logo bal={this.state.balance}/>
+          <Logo
+          bal={this.state.balance}
+          />
         <div className = "formDiv">
           <br />
           <p> Send a thought to the blockchain!</p>
@@ -202,6 +225,8 @@ class Public extends Component {
             : <Thought
               thoughts={this.state.thoughts}
               createThought={this.createThought}
+              hand = {this.state.currentHandle}
+              acct = {this.state.account}
              />
 
           }

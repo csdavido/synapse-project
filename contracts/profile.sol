@@ -88,13 +88,19 @@ contract profile {
     function getHandle(address _addr) public view returns (string memory) {
         return handles[_addr];
     }
-    
+
     function getOwnHandle() public view returns (string memory) {
         return handles[msg.sender];
     }
-    
+
     event checkHandle(string _handle, address sndr, uint avail);
 
+
+    function compareStrings (string memory a, string memory b) public view
+       returns (bool) {
+  return (keccak256(abi.encodePacked((a))) == keccak256(abi.encodePacked((b))) );
+
+       }
 
     function updateUser(string memory _handle) public returns (uint) {
 
@@ -104,6 +110,17 @@ contract profile {
         firstThought(_handle);
         emit checkHandle (_handle, msg.sender, 1);
         //return 1;
+      }
+
+      else if (compareStrings(_handle, "Anonymous") == true) {
+
+        string memory handleStorageAnon = handles[msg.sender];
+
+
+        users[sndr] = User(sndr, _handle, msg.sender);
+        handles[msg.sender] = _handle;
+        handleList[handleStorageAnon] = 0;
+        handleList[_handle] = 0;
       }
 
       else {

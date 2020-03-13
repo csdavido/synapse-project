@@ -23,6 +23,23 @@ div.left {
 
 }
 
+div.info {
+
+  margin-top: 20px;
+  color: white;
+  font-size: 12;
+	padding: 0px;
+	width: 520px;
+	background-color: #777;
+
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 div.right {
 	float: left;
 	padding: 10px;

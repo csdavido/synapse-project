@@ -9,6 +9,7 @@ import { BIO_ABI, BIO_ADDRESS } from '../config'
 import { USER_ABI, USER_ADDRESS } from '../config'
 import Thought from '../createThought.js'
 import Feed from '../feed.js'
+import Follow from '../components/follow.js'
 
 
 function isInstalled() {
@@ -138,47 +139,60 @@ class Home extends Component {
   async getOwnHandle() {
       const web3 = new Web3(Web3.givenProvider || "http://localhost:8545")
       const profile = new web3.eth.Contract(PROFILE_ABI, PROFILE_ADDRESS)
-      const accounts = await web3.eth.getAccounts()       
-      
+      const accounts = await web3.eth.getAccounts()
+
       let curHandle = "";
-      
+
       profile.methods.getOwnHandle().call({ from: accounts[0]}).then(val => {
           if (val === undefined || val === null || val === "")
           {
             this.setState({ currentHandle: "Anonymous" });
           }
-          else 
+          else
           {
               this.setState({ currentHandle: val });
-          }          
+          }
       }, reason => {});
   }
-  
+
 
   render() {
     return (
       <div className="App">
 
           <section>
-            <div class="left">
-              <h5> Account: {this.state.account} </h5>
-              <h5> @{this.state.currentHandle} </h5>
-              <h5>My Balance: <p> {this.state.balance}</p></h5>
-              <h5>My Bio: <p> {this.state.currentBio} </p> </h5>
+            <div class="flex">
+              <div class="info">
+                <h5> Account: {this.state.account} </h5>
+                <h5> Handle: @{this.state.currentHandle} </h5>
+                <h5>My Balance: <p> {this.state.balance}</p></h5>
+                <h5>My Bio: <p> {this.state.currentBio} </p> </h5>
+              </div>
             </div>
 
-            <div class="right">
-              { this.state.loading
-                ? <div id="loader" className=""><p className="">Communicating with blockchain...</p></div>
-                : <Thought
-                  thoughts={this.state.thoughts}
-                  createThought={this.createThought}
-                  />
-              }
+            <div>
+              <div className = "formDiv">
+                <br />
+                <p> Send a thought to the blockchain!</p>
+
+                { this.state.loading
+                  ? <div id="loader" className=""><p className="">Communicating with blockchain...</p></div>
+                  : <Thought
+                    thoughts={this.state.thoughts}
+                    createThought={this.createThought}
+                    hand = {this.state.currentHandle}
+                    acct = {this.state.account}
+                   />
+
+                }
+
+              </div>
 
               <span></span>
 
               <Feed thoughts={this.state.thoughts} />
+
+              <Follow />
 
             </div>
           </section>

@@ -21,9 +21,15 @@ class Thought extends Component {
           event.preventDefault()
           this.props.createThought(this.thought.value)
         }}>
+        <div class = "infoFlex">
+        <span> &nbsp; </span>
+          <span className="acctBalance">Account: {this.props.acct}</span>
+          <span className="handBalance">Handle: @{this.props.hand}</span>
+          <span> &nbsp; </span>
+        </div>
           <textarea ref={(input) => this.thought = input} type="text" className="thoughtBox" placeholder="What are you thinking?" required />
           <br />
-          <input type="submit" hidden={false} />
+            <input type="submit" hidden={false} />
         </form>
 
         <hr/>
