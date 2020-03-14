@@ -9,7 +9,6 @@ import { BIO_ABI, BIO_ADDRESS } from '../config'
 import { USER_ABI, USER_ADDRESS } from '../config'
 import Thought from '../createThought.js'
 import Feed from '../feed.js'
-import Follow from '../components/follow.js'
 
 
 function isInstalled() {
@@ -192,7 +191,6 @@ class Home extends Component {
 
               <Feed thoughts={this.state.thoughts} />
 
-              <Follow />
 
             </div>
           </section>
