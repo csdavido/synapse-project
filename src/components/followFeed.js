@@ -68,7 +68,8 @@ class Follow extends Component {
   }
 
   async componentWillUnmount() {
-    clearInterval(this.interval);
+    clearInterval(this.interval)
+
   }
 
 
@@ -134,6 +135,7 @@ class Follow extends Component {
     var fcCount = await this.state.follow.methods.getFollowCount().call({ from: this.state.account })
 
     console.log("COUNT: " + fcCount)
+    console.log(typeof this.state.account)
 
     var singleFollow = "follow"
 
@@ -144,8 +146,8 @@ class Follow extends Component {
 
     singleFollow = await this.state.follow.methods.following(this.state.account, i).call()
 
-
     console.log(singleFollow)
+    console.log(typeof singleFollow);
 
     if (singleFollow) {
       this.setState({
@@ -258,17 +260,17 @@ class Follow extends Component {
         &nbsp;
         <input type="submit" hidden={false} />
         </form>
-*/}
       <br />
 
       <form onSubmit={(event) => {
     event.preventDefault()
     this.populateThoughts()
       }}>
+
     &nbsp;
     <input type="submit" hidden={false} />
     </form>
-
+*/}
 
     { this.state.loading
       ? <div id="loader" className=""><p className="">Getting feed...</p></div>

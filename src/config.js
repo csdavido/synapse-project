@@ -4,7 +4,7 @@ import Bio from './contractsABI/bio.json'
 
 
 
-export const FOLLOW_ADDRESS = '0x4b9Abdf36222f49829242468028b9a7e68e79732'
+export const FOLLOW_ADDRESS = '0x4d5437D1c953C608a88be173983Ff2d32a272C2E'
 
 export const FOLLOW_ABI = [
 	{
