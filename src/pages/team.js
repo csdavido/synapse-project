@@ -19,7 +19,7 @@ class Team extends Component {
 	      				<p>Synapse connects its users, allowing them to send thoughts on the blockchain.</p>
 	      				<br></br>
 	      				<h3>Andrew Ngo</h3>
-	      				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      				<p>Andrew is a data analyst turned software engineer, AI enthusiast and loves hamburgers.</p>
 	      				<h3>David Rider</h3>
 	      				<p>David is a software engineer, security nerd, and cryptocurrency enthusiast. He lives in South Korea and plays way too many video games. You can email him at riderda@oregonstate.edu</p>
 	      				<h3>Reuben Youngblom</h3>
