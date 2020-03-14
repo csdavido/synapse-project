@@ -191,8 +191,9 @@ class Home extends Component {
 
               <Feed thoughts={this.state.thoughts} />
 
-
             </div>
+            <br />
+            <br />
           </section>
       </div>
     );
